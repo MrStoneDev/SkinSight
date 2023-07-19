@@ -21,7 +21,7 @@ class ImageUploader {
         let contentType = "multipart/form-data; boundary=\(boundary)"
         request.setValue(contentType, forHTTPHeaderField: "Content-Type")
 
-        let imageDataKey = "file" // Change the field name to "file"
+        let imageDataKey = "file"
 
         var body = Data()
         body.append("--\(boundary)\r\n".data(using: .utf8)!)
@@ -33,7 +33,7 @@ class ImageUploader {
         request.httpBody = body
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            // ... (rest of the code remains the same)
+            
         }
         print("URL: \(urlString)")
         print("Content-Type: \(contentType)")
