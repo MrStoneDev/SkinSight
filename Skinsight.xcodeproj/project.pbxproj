@@ -19,6 +19,7 @@
 		856D4E442A677CC7002034D6 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 856D4E432A677CC7002034D6 /* Inter-Regular.ttf */; };
 		856D4E462A67B36A002034D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856D4E452A67B36A002034D6 /* Assets.xcassets */; };
 		859695CC2A6735DE00B31C6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859695CB2A6735DE00B31C6F /* HomeViewController.swift */; };
+		85D3756C2A6885C30056CE79 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3756B2A6885C30056CE79 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		856D4E432A677CC7002034D6 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		856D4E452A67B36A002034D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		859695CB2A6735DE00B31C6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		85D3756B2A6885C30056CE79 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 		8533621E2A6600E9003127A2 = {
 			isa = PBXGroup;
 			children = (
-				856D4E3E2A674AC6002034D6 /* Fonts */,
 				853362292A6600E9003127A2 /* Skinsight */,
 				853362282A6600E9003127A2 /* Products */,
 			);
@@ -74,9 +75,9 @@
 				859695C62A67207C00B31C6F /* Models */,
 				859695C42A67203A00B31C6F /* Views */,
 				859695C52A67206200B31C6F /* Controllers */,
-				853362352A6600EA003127A2 /* LaunchScreen.storyboard */,
 				853362382A6600EA003127A2 /* Info.plist */,
 				856D4E452A67B36A002034D6 /* Assets.xcassets */,
+				856D4E3E2A674AC6002034D6 /* Fonts */,
 			);
 			path = Skinsight;
 			sourceTree = "<group>";
@@ -94,6 +95,7 @@
 		859695C42A67203A00B31C6F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				853362352A6600EA003127A2 /* LaunchScreen.storyboard */,
 				853362302A6600E9003127A2 /* Main.storyboard */,
 			);
 			path = Views;
@@ -105,6 +107,7 @@
 				8533622E2A6600E9003127A2 /* MainViewController.swift */,
 				859695CB2A6735DE00B31C6F /* HomeViewController.swift */,
 				856D4E3F2A676A74002034D6 /* SignUpViewController.swift */,
+				85D3756B2A6885C30056CE79 /* SignInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D3756C2A6885C30056CE79 /* SignInViewController.swift in Sources */,
 				856D4E402A676A74002034D6 /* SignUpViewController.swift in Sources */,
 				859695CC2A6735DE00B31C6F /* HomeViewController.swift in Sources */,
 				8533622F2A6600E9003127A2 /* MainViewController.swift in Sources */,

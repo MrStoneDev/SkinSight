@@ -1,19 +1,18 @@
 //
-//  SignUpViewController.swift
+//  SignInViewController.swift
 //  Skinsight
 //
-//  Created by Mario Alvarado on 18/07/23.
+//  Created by Mario Alvarado on 19/07/23.
 //
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignInViewController: UIViewController {
     
     let grayColor = UIColor(red: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0)
     let blueColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
     let borderColor = UIColor(red: 163.0/255.0, green: 148.0/255.0, blue: 148.0/255.0, alpha: 1.0)
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,18 +24,9 @@ class SignUpViewController: UIViewController {
         userTextField.leftViewMode = .always
         
         view.addSubview(userTextField)
-
-        // E-mail Text Field
-        let emailTextField = createTextField(frame: CGRect(x: 67, y: 370, width: 280, height: 55), placeholder: "E-mail")
         
-        let emailLeftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 55))
-        emailTextField.leftView = emailLeftPaddingView
-        emailTextField.leftViewMode = .always
-        
-        view.addSubview(emailTextField)
-
         // Password Text Field
-        let passwordTextField = createTextField(frame: CGRect(x: 67, y: 447, width: 280, height: 55), placeholder: "Password")
+        let passwordTextField = createTextField(frame: CGRect(x: 67, y: 370, width: 280, height: 55), placeholder: "Password")
         
         let passwordLeftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 55))
         passwordTextField.leftView = passwordLeftPaddingView
@@ -44,17 +34,29 @@ class SignUpViewController: UIViewController {
         
         view.addSubview(passwordTextField)
         
-        // Sign up Button
-        let signUpButton = UIButton(type: .custom)
+        // Forgot password button
+        let forgotPasswordButton = UIButton()
         
-        signUpButton.setTitle("Sign up", for: .normal)
-        signUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
+        forgotPasswordButton.setTitle("tap here", for: .normal)
+        forgotPasswordButton.setTitleColor(blueColor, for: .normal)
         
-        signUpButton.backgroundColor = blueColor
-        signUpButton.layer.cornerRadius = 20
-        signUpButton.frame = CGRect(x: 130, y: 535, width: 150, height: 40)
+        forgotPasswordButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
+        forgotPasswordButton.frame = CGRect(x: 183, y: 485, width: 51, height: 17)
         
-        self.view.addSubview(signUpButton)
+        
+        self.view.addSubview(forgotPasswordButton)
+        
+        // Sign in Button
+        let signInButton = UIButton(type: .custom)
+        
+        signInButton.setTitle("Sign in", for: .normal)
+        signInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
+        
+        signInButton.backgroundColor = blueColor
+        signInButton.layer.cornerRadius = 20
+        signInButton.frame = CGRect(x: 130, y: 535, width: 150, height: 40)
+        
+        self.view.addSubview(signInButton)
         
         // Create a UIView to act as the line separator
         let lineSeparator = UIView(frame: CGRect(x: 118, y: 645, width: 180, height: 1))
@@ -72,28 +74,18 @@ class SignUpViewController: UIViewController {
         
         self.view.addSubview(signUpFacebook)
         
-        // Account label
-        let accountLabel = UILabel()
+        // toSignUp button
+        let toSignUpButton = UIButton()
         
-        accountLabel.text = "Already have an\naccount?"
-        accountLabel.numberOfLines = 2
+        toSignUpButton.setTitle("Sign up", for: .normal)
+        toSignUpButton.setTitleColor(blueColor, for: .normal)
         
-        accountLabel.font = UIFont(name: "Lato-Regular", size: 14.0)
-        accountLabel.frame = CGRect(x: 159, y: 790, width: 200, height: 40)
-       
-        self.view.addSubview(accountLabel)
-        
-        // toSignIn button
-        let toSignInButton = UIButton()
-        
-        toSignInButton.setTitle("Sign in", for: .normal)
-        toSignInButton.setTitleColor(blueColor, for: .normal)
-        
-        toSignInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
-        toSignInButton.frame = CGRect(x: 137, y: 798, width: 200, height: 40)
+        toSignUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
+        toSignUpButton.frame = CGRect(x: 108, y: 798, width: 200, height: 40)
         
         
-        self.view.addSubview(toSignInButton)
+        self.view.addSubview(toSignUpButton)
+        
     }
     
     //MARK: - Create TextField
@@ -125,4 +117,5 @@ class SignUpViewController: UIViewController {
         button.frame = CGRect(origin: position, size: CGSize(width: 280, height: 40))
         return button
     }
+    
 }
