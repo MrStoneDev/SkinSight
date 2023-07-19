@@ -75,9 +75,9 @@
 				859695C62A67207C00B31C6F /* Models */,
 				859695C42A67203A00B31C6F /* Views */,
 				859695C52A67206200B31C6F /* Controllers */,
+				856D4E3E2A674AC6002034D6 /* Fonts */,
 				853362382A6600EA003127A2 /* Info.plist */,
 				856D4E452A67B36A002034D6 /* Assets.xcassets */,
-				856D4E3E2A674AC6002034D6 /* Fonts */,
 			);
 			path = Skinsight;
 			sourceTree = "<group>";
