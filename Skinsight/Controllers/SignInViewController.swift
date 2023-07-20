@@ -12,7 +12,13 @@ class SignInViewController: UIViewController {
     let grayColor = UIColor(red: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0)
     let blueColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
     let borderColor = UIColor(red: 163.0/255.0, green: 148.0/255.0, blue: 148.0/255.0, alpha: 1.0)
-
+    let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
+    let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
+    
+    let forgotPasswordButton = UIButton()
+    let signInButton = UIButton(type: .custom)
+    let toSignUpButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,26 +41,25 @@ class SignInViewController: UIViewController {
         view.addSubview(passwordTextField)
         
         // Forgot password button
-        let forgotPasswordButton = UIButton()
-        
         forgotPasswordButton.setTitle("tap here", for: .normal)
         forgotPasswordButton.setTitleColor(blueColor, for: .normal)
         
         forgotPasswordButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
         forgotPasswordButton.frame = CGRect(x: 183, y: 485, width: 51, height: 17)
         
+        forgotPasswordButton.addTarget(self, action: #selector(forgotPasswordButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(forgotPasswordButton)
         
         // Sign in Button
-        let signInButton = UIButton(type: .custom)
-        
         signInButton.setTitle("Sign in", for: .normal)
         signInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
         
         signInButton.backgroundColor = blueColor
         signInButton.layer.cornerRadius = 20
         signInButton.frame = CGRect(x: 130, y: 535, width: 150, height: 40)
+        
+        signInButton.addTarget(self, action: #selector(signInButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(signInButton)
         
@@ -75,14 +80,14 @@ class SignInViewController: UIViewController {
         self.view.addSubview(signUpFacebook)
         
         // toSignUp button
-        let toSignUpButton = UIButton()
-        
         toSignUpButton.setTitle("Sign up", for: .normal)
         toSignUpButton.setTitleColor(blueColor, for: .normal)
         
         toSignUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
         toSignUpButton.frame = CGRect(x: 108, y: 798, width: 200, height: 40)
         
+        toSignUpButton.addTarget(self, action: #selector(toSignUpButtonTapped), for: .touchUpInside)
+        toSignUpButton.addTarget(self, action: #selector(toSignUpButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(toSignUpButton)
         
@@ -116,6 +121,39 @@ class SignInViewController: UIViewController {
         button.layer.borderWidth = 1
         button.frame = CGRect(origin: position, size: CGSize(width: 280, height: 40))
         return button
+    }
+    
+    //MARK: - Navigation
+    
+    @objc func toSignUpButtonTapped() {
+        // Trigger the segue to the Sign Up view controller
+        performSegue(withIdentifier: "toSignUpSegue", sender: self)
+    }
+    
+    //MARK: - Buttons animation
+    
+    @objc func forgotPasswordButtonTouchDown() {
+        forgotPasswordButton.setTitleColor(self.animationButtonColor, for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            self.forgotPasswordButton.setTitleColor(self.skinsightColor, for: .normal)
+        }
+    }
+    
+    @objc func signInButtonTouchDown() {
+        signInButton.setTitleColor(self.animationButtonColor, for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            self.signInButton.setTitleColor(.white, for: .normal)
+        }
+    }
+    
+    @objc func toSignUpButtonTouchDown() {
+        toSignUpButton.setTitleColor(self.animationButtonColor, for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            self.toSignUpButton.setTitleColor(self.skinsightColor, for: .normal)
+        }
     }
     
 }

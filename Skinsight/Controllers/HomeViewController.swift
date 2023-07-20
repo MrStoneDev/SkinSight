@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     let signUpButton = UIButton(type: .custom)
     
     let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
+    let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,30 +48,34 @@ class HomeViewController: UIViewController {
 
     }
     
+    //MARK: - Navigation
+    
     @objc func signInButtonTapped() {
         // Trigger the segue to the Sign In view controller
-        performSegue(withIdentifier: "SignInStoryboard", sender: self)
+        performSegue(withIdentifier: "SignInSegue", sender: self)
     }
 
     @objc func signUpButtonTapped() {
         // Trigger the segue to the Sign Up view controller
-        performSegue(withIdentifier: "SignUpStoryboard", sender: self)
+        performSegue(withIdentifier: "SignUpSegue", sender: self)
     }
+    
+    //MARK: - Buttons animation
     
     // Handle touch down events to change the text color temporarily
     @objc func signInButtonTouchDown() {
-        signInButton.setTitleColor(.cyan, for: .normal)
+        signInButton.setTitleColor(self.animationButtonColor, for: .normal)
         
         // Revert the color change after 0.25 second
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             self.signInButton.setTitleColor(.white, for: .normal)
         }
     }
 
     @objc func signUpButtonTouchDown() {
-        signUpButton.setTitleColor(.cyan, for: .normal)
+        signUpButton.setTitleColor(self.animationButtonColor, for: .normal)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             self.signUpButton.setTitleColor(self.skinsightColor, for: .normal)
         }
     }
