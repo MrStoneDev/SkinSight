@@ -12,6 +12,11 @@ class SignUpViewController: UIViewController {
     let grayColor = UIColor(red: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0)
     let blueColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
     let borderColor = UIColor(red: 163.0/255.0, green: 148.0/255.0, blue: 148.0/255.0, alpha: 1.0)
+    let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
+    let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
+    
+    let signUpButton = UIButton(type: .custom)
+    let toSignInButton = UIButton()
 
     
     override func viewDidLoad() {
@@ -45,14 +50,14 @@ class SignUpViewController: UIViewController {
         view.addSubview(passwordTextField)
         
         // Sign up Button
-        let signUpButton = UIButton(type: .custom)
-        
         signUpButton.setTitle("Sign up", for: .normal)
         signUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
         
         signUpButton.backgroundColor = blueColor
         signUpButton.layer.cornerRadius = 20
         signUpButton.frame = CGRect(x: 130, y: 535, width: 150, height: 40)
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(signUpButton)
         
@@ -84,14 +89,14 @@ class SignUpViewController: UIViewController {
         self.view.addSubview(accountLabel)
         
         // toSignIn button
-        let toSignInButton = UIButton()
-        
         toSignInButton.setTitle("Sign in", for: .normal)
         toSignInButton.setTitleColor(blueColor, for: .normal)
         
         toSignInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
         toSignInButton.frame = CGRect(x: 137, y: 798, width: 200, height: 40)
         
+        toSignInButton.addTarget(self, action: #selector(toSignInButtonTapped), for: .touchUpInside)
+        toSignInButton.addTarget(self, action: #selector(toSignInButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(toSignInButton)
     }
@@ -124,5 +129,30 @@ class SignUpViewController: UIViewController {
         button.layer.borderWidth = 1
         button.frame = CGRect(origin: position, size: CGSize(width: 280, height: 40))
         return button
+    }
+    
+    //MARK: - Navigation
+    
+    @objc func toSignInButtonTapped() {
+        // Trigger the segue to the Sign Up view controller
+        performSegue(withIdentifier: "toSignInSegue", sender: self)
+    }
+    
+    //MARK: - Buttons animation
+    
+    @objc func signUpButtonTouchDown() {
+        signUpButton.setTitleColor(self.animationButtonColor, for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            self.signUpButton.setTitleColor(.white, for: .normal)
+        }
+    }
+    
+    @objc func toSignInButtonTouchDown() {
+        toSignInButton.setTitleColor(self.animationButtonColor, for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            self.toSignInButton.setTitleColor(self.skinsightColor, for: .normal)
+        }
     }
 }

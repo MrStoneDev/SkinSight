@@ -62,6 +62,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ovM-C2-lEf"/>
+                    <connections>
+                        <segue destination="6If-WX-iuO" kind="show" identifier="toSignInSegue" id="baq-Vz-gRt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBs-e6-Bbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,6 +186,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="baq-Vz-gRt"/>
         <segue reference="2pr-No-inT"/>
     </inferredMetricsTieBreakers>
     <resources>
