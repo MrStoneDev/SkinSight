@@ -19,6 +19,7 @@ class SignInViewController: UIViewController {
     let signInButton = UIButton(type: .custom)
     let toSignUpButton = UIButton()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +32,7 @@ class SignInViewController: UIViewController {
         
         view.addSubview(userTextField)
         
+        
         // Password Text Field
         let passwordTextField = createTextField(frame: CGRect(x: 67, y: 370, width: 280, height: 55), placeholder: "Password")
         
@@ -39,6 +41,7 @@ class SignInViewController: UIViewController {
         passwordTextField.leftViewMode = .always
         
         view.addSubview(passwordTextField)
+        
         
         // Forgot password button
         forgotPasswordButton.setTitle("tap here", for: .normal)
@@ -51,6 +54,7 @@ class SignInViewController: UIViewController {
         
         self.view.addSubview(forgotPasswordButton)
         
+        
         // Sign in Button
         signInButton.setTitle("Sign in", for: .normal)
         signInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
@@ -59,25 +63,30 @@ class SignInViewController: UIViewController {
         signInButton.layer.cornerRadius = 20
         signInButton.frame = CGRect(x: 130, y: 535, width: 150, height: 40)
         
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(signInButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(signInButton)
         
-        // Create a UIView to act as the line separator
+        
+        // Separator
         let lineSeparator = UIView(frame: CGRect(x: 118, y: 645, width: 180, height: 1))
         lineSeparator.backgroundColor = borderColor
         
         view.addSubview(lineSeparator)
+        
         
         // "Sign up with Google" button
         let signUpGoogle = createCustomButton(imageName: "google_icon", title: "Sign up with Google", position: CGPoint(x: 67, y: 680))
         
         self.view.addSubview(signUpGoogle)
 
+        
         // "Sign up with Facebook" button
         let signUpFacebook = createCustomButton(imageName: "facebook_icon", title: "Sign up with Facebook", position: CGPoint(x: 67, y: 730))
         
         self.view.addSubview(signUpFacebook)
+        
         
         // toSignUp button
         toSignUpButton.setTitle("Sign up", for: .normal)
@@ -90,8 +99,8 @@ class SignInViewController: UIViewController {
         toSignUpButton.addTarget(self, action: #selector(toSignUpButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(toSignUpButton)
-        
     }
+    
     
     //MARK: - Create TextField
     func createTextField(frame: CGRect, placeholder: String) -> UITextField {
@@ -103,6 +112,7 @@ class SignInViewController: UIViewController {
         
         return textField
     }
+    
     
     //MARK: - Create CustomButton
     func createCustomButton(imageName: String, title: String, position: CGPoint) -> UIButton {
@@ -123,11 +133,17 @@ class SignInViewController: UIViewController {
         return button
     }
     
+    
     //MARK: - Navigation
     
     @objc func toSignUpButtonTapped() {
         // Trigger the segue to the Sign Up view controller
         performSegue(withIdentifier: "toSignUpSegue", sender: self)
+    }
+    
+    @objc func signInButtonTapped() {
+        // Trigger the segue to the Sign Up view controller
+        performSegue(withIdentifier: "inToMainSegue", sender: self)
     }
     
     //MARK: - Buttons animation

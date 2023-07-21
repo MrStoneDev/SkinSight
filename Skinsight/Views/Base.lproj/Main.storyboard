@@ -18,11 +18,12 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="24o-ot-cpA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,7 +34,7 @@
             <objects>
                 <viewController id="VaK-Bg-Axn" customClass="SignUpViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ui-Xr-czf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9t-ut-769">
@@ -64,6 +65,7 @@
                     <navigationItem key="navigationItem" id="ovM-C2-lEf"/>
                     <connections>
                         <segue destination="6If-WX-iuO" kind="show" identifier="toSignInSegue" id="baq-Vz-gRt"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="upToMainSegue" id="eZo-io-21r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBs-e6-Bbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -75,7 +77,7 @@
             <objects>
                 <viewController id="6If-WX-iuO" customClass="SignInViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QSC-Lh-DTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO1-a5-0iN">
@@ -120,6 +122,7 @@
                     <navigationItem key="navigationItem" id="K8G-ze-hYm"/>
                     <connections>
                         <segue destination="VaK-Bg-Axn" kind="show" identifier="toSignUpSegue" id="iWa-yD-71V"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="inToMainSegue" id="1Bq-LB-al4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6Z-aB-kFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,7 +190,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="baq-Vz-gRt"/>
-        <segue reference="2pr-No-inT"/>
+        <segue reference="iWa-yD-71V"/>
+        <segue reference="1Bq-LB-al4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Skinsight-logo-s" width="206.38999938964844" height="206.53999328613281"/>

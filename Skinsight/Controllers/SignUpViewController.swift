@@ -17,7 +17,10 @@ class SignUpViewController: UIViewController {
     
     let signUpButton = UIButton(type: .custom)
     let toSignInButton = UIButton()
-
+    
+    let lineSeparator = UIView(frame: CGRect(x: 118, y: 645, width: 180, height: 1))
+    
+    let accountLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,7 @@ class SignUpViewController: UIViewController {
         
         view.addSubview(userTextField)
 
+        
         // E-mail Text Field
         let emailTextField = createTextField(frame: CGRect(x: 67, y: 370, width: 280, height: 55), placeholder: "E-mail")
         
@@ -40,6 +44,7 @@ class SignUpViewController: UIViewController {
         
         view.addSubview(emailTextField)
 
+        
         // Password Text Field
         let passwordTextField = createTextField(frame: CGRect(x: 67, y: 447, width: 280, height: 55), placeholder: "Password")
         
@@ -48,6 +53,7 @@ class SignUpViewController: UIViewController {
         passwordTextField.leftViewMode = .always
         
         view.addSubview(passwordTextField)
+        
         
         // Sign up Button
         signUpButton.setTitle("Sign up", for: .normal)
@@ -61,25 +67,25 @@ class SignUpViewController: UIViewController {
         
         self.view.addSubview(signUpButton)
         
-        // Create a UIView to act as the line separator
-        let lineSeparator = UIView(frame: CGRect(x: 118, y: 645, width: 180, height: 1))
-        lineSeparator.backgroundColor = borderColor
         
+        // Separator
+        lineSeparator.backgroundColor = borderColor
         view.addSubview(lineSeparator)
+        
         
         // "Sign up with Google" button
         let signUpGoogle = createCustomButton(imageName: "google_icon", title: "Sign up with Google", position: CGPoint(x: 67, y: 680))
         
         self.view.addSubview(signUpGoogle)
 
+        
         // "Sign up with Facebook" button
         let signUpFacebook = createCustomButton(imageName: "facebook_icon", title: "Sign up with Facebook", position: CGPoint(x: 67, y: 730))
         
         self.view.addSubview(signUpFacebook)
         
-        // Account label
-        let accountLabel = UILabel()
         
+        // Account label
         accountLabel.text = "Already have an\naccount?"
         accountLabel.numberOfLines = 2
         
@@ -87,6 +93,7 @@ class SignUpViewController: UIViewController {
         accountLabel.frame = CGRect(x: 159, y: 790, width: 200, height: 40)
        
         self.view.addSubview(accountLabel)
+        
         
         // toSignIn button
         toSignInButton.setTitle("Sign in", for: .normal)
@@ -101,6 +108,7 @@ class SignUpViewController: UIViewController {
         self.view.addSubview(toSignInButton)
     }
     
+    
     //MARK: - Create TextField
     func createTextField(frame: CGRect, placeholder: String) -> UITextField {
         let textField = UITextField(frame: frame)
@@ -111,6 +119,7 @@ class SignUpViewController: UIViewController {
         
         return textField
     }
+    
     
     //MARK: - Create CustomButton
     func createCustomButton(imageName: String, title: String, position: CGPoint) -> UIButton {
@@ -131,12 +140,14 @@ class SignUpViewController: UIViewController {
         return button
     }
     
+    
     //MARK: - Navigation
     
     @objc func toSignInButtonTapped() {
         // Trigger the segue to the Sign Up view controller
         performSegue(withIdentifier: "toSignInSegue", sender: self)
     }
+    
     
     //MARK: - Buttons animation
     
