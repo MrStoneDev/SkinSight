@@ -31,9 +31,9 @@ class CustomModalView: UIView {
         return button
     }()
     
-    let uploadImageButton: UIButton = {
+    let selectImageButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Upload an image", for: .normal)
+        button.setTitle("Select an image", for: .normal)
         return button
     }()
     
@@ -56,13 +56,13 @@ class CustomModalView: UIView {
         addSubview(label)
         addSubview(closeButton)
         addSubview(takePhotoButton)
-        addSubview(uploadImageButton)
+        addSubview(selectImageButton)
         
         // Set constraints for UI elements
         label.translatesAutoresizingMaskIntoConstraints = false
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         takePhotoButton.translatesAutoresizingMaskIntoConstraints = false
-        uploadImageButton.translatesAutoresizingMaskIntoConstraints = false
+        selectImageButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -77,10 +77,10 @@ class CustomModalView: UIView {
             takePhotoButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             takePhotoButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
-            uploadImageButton.topAnchor.constraint(equalTo: takePhotoButton.bottomAnchor, constant: 10),
-            uploadImageButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            uploadImageButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            uploadImageButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            selectImageButton.topAnchor.constraint(equalTo: takePhotoButton.bottomAnchor, constant: 10),
+            selectImageButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            selectImageButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            selectImageButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
     

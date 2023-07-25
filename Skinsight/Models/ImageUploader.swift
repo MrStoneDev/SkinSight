@@ -7,7 +7,7 @@ class ImageUploader {
             return
         }
 
-        let urlString = "https://739c-35-225-126-248.ngrok.io/file" // Replace this with your actual API endpoint URL
+        let urlString = "https://6cb0-34-125-125-251.ngrok.io/file" // Replace this with your actual API endpoint URL
 
         guard let url = URL(string: urlString) else {
             completion(false, nil)
@@ -35,9 +35,6 @@ class ImageUploader {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             
         }
-        print("URL: \(urlString)")
-        print("Content-Type: \(contentType)")
-        print("Body: \(String(data: body, encoding: .utf8) ?? "No Body Data")")
 
         task.resume()
     }

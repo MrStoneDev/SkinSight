@@ -7,10 +7,17 @@
 
 import UIKit
 
-class ScanViewController: UIViewController {
+class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let circleButton = CircleButtonWithCross(frame: CGRect(x: 0, y: 0, width: 47, height: 47))
     var customModalView: CustomModalView!
+    
+    let imageView = UIImageView()
+    let imagePicker = UIImagePickerController()
+    let cameraPicker = UIImagePickerController()
+    
+    let imageUploader = ImageUploader()
+    let uploadButton = UIButton(type: .system)
     
     // Create a semi-transparent overlay view
     lazy var overlayView: UIView = {
@@ -22,6 +29,19 @@ class ScanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up the imageView
+        imageView.frame = CGRect(x: 50, y: 100, width: 200, height: 200)
+        imageView.contentMode = .scaleAspectFit
+        view.addSubview(imageView)
+        
+        // Set up the imagePicker for photo library
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        
+        // Set up the imagePicker for camera
+        cameraPicker.delegate = self
+        cameraPicker.sourceType = .camera
         
         // Circular button
         circleButton.center = view.center
@@ -35,6 +55,12 @@ class ScanViewController: UIViewController {
         
         // Add the overlay view before the modal view
         view.insertSubview(overlayView, belowSubview: customModalView)
+        
+        uploadButton.setTitle("Upload Image", for: .normal)
+        uploadButton.addTarget(self, action: #selector(uploadImage), for: .touchUpInside)
+        uploadButton.frame = CGRect(x: 60, y: 520, width: 200, height: 50)
+        view.addSubview(uploadButton)
+        
     }
 
     @objc func circleButtonTapped() {
@@ -55,7 +81,33 @@ class ScanViewController: UIViewController {
         // Add actions to buttons
         customModalView.closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         customModalView.takePhotoButton.addTarget(self, action: #selector(takePhotoButtonTapped), for: .touchUpInside)
-        customModalView.uploadImageButton.addTarget(self, action: #selector(uploadImageButtonTapped), for: .touchUpInside)
+        customModalView.selectImageButton.addTarget(self, action: #selector(selectImageButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func takePhotoButtonTapped() {
+        present(cameraPicker, animated: true, completion: nil)
+    }
+    
+    @objc func selectImageButtonTapped() {
+        present(imagePicker, animated: true, completion: nil)
+    }
+
+    @objc func uploadImage() {
+        guard let image = imageView.image else {
+            print("Please select an image first.")
+            return
+        }
+
+        let filename = "uploaded_image.jpg" // You can choose a different filename if needed
+        imageUploader.uploadImage(image: image, filename: filename) { success, error in
+            if success {
+                print("Image uploaded successfully!")
+            } else if let error = error {
+                print("Error uploading image: \(error.localizedDescription)")
+            } else {
+                print("Unknown error occurred while uploading image.")
+            }
+        }
     }
     
     @objc func closeButtonTapped() {
@@ -69,12 +121,12 @@ class ScanViewController: UIViewController {
             self.customModalView.alpha = 0.0
         }
     }
-    
-    @objc func takePhotoButtonTapped() {
-        // Add your code for handling the "Take a photo" button action here
-    }
-    
-    @objc func uploadImageButtonTapped() {
-        // Add your code for handling the "Upload an image" button action here
+
+    // Delegate method to handle image selection from the imagePicker
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            imageView.image = selectedImage
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }
