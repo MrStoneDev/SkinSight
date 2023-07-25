@@ -21,8 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxL-Fe-uR1">
-                                <rect key="frame" x="176" y="81" width="63" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start scanning your image here!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGL-vO-WZc">
+                                <rect key="frame" x="151" y="332" width="112" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiy-GN-fld">
+                                <rect key="frame" x="176" y="118" width="63" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -36,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="19"/>
+            <point key="canvasLocation" x="3282.608695652174" y="-11.383928571428571"/>
         </scene>
         <!--Diagnosis View Controller-->
         <scene sceneID="T7L-2p-pDF">
@@ -47,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7C-kW-WbE">
-                                <rect key="frame" x="137" y="84" width="128" height="36"/>
+                                <rect key="frame" x="143" y="118" width="128" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -61,14 +68,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLi-TZ-283" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2195.6521739130435" y="-662.27678571428567"/>
+            <point key="canvasLocation" x="3283" y="-812"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="4B5-NL-4DT">
             <objects>
                 <viewController id="VaK-Bg-Axn" customClass="SignUpViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ui-Xr-czf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9t-ut-769">
@@ -99,8 +106,7 @@
                     <navigationItem key="navigationItem" id="ovM-C2-lEf"/>
                     <connections>
                         <segue destination="6If-WX-iuO" kind="show" identifier="toSignInSegue" id="baq-Vz-gRt"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="upToMainSegue" id="eZo-io-21r"/>
-                        <segue destination="xJw-3Q-TSG" kind="show" id="F9B-CG-CuK"/>
+                        <segue destination="S9B-jI-Drp" kind="show" identifier="upToMainSegue" id="iGq-1P-FUu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBs-e6-Bbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -112,7 +118,7 @@
             <objects>
                 <viewController id="6If-WX-iuO" customClass="SignInViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QSC-Lh-DTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO1-a5-0iN">
@@ -157,8 +163,7 @@
                     <navigationItem key="navigationItem" id="K8G-ze-hYm"/>
                     <connections>
                         <segue destination="VaK-Bg-Axn" kind="show" identifier="toSignUpSegue" id="iWa-yD-71V"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="inToMainSegue" id="1Bq-LB-al4"/>
-                        <segue destination="2He-om-fAw" kind="show" id="W5m-Zp-m0m"/>
+                        <segue destination="S9B-jI-Drp" kind="show" identifier="inToMainSegue" id="YPV-Ab-phV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6Z-aB-kFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-WC-ha4">
-                                <rect key="frame" x="165" y="98" width="85" height="36"/>
+                                <rect key="frame" x="165" y="118" width="85" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -188,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3c-Ut-jOx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="739"/>
+            <point key="canvasLocation" x="3283" y="765"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="N77-lY-uS9">
@@ -253,21 +258,22 @@
             <objects>
                 <viewController id="S9B-jI-Drp" customClass="TabBarController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K6I-X2-Q9o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cef-ot-RuA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9DO-2i-csu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9u-IU-yS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3284" y="19"/>
+            <point key="canvasLocation" x="2241" y="-11"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9T0-1j-nhn"/>
-        <segue reference="2pr-No-inT"/>
-        <segue reference="eZo-io-21r"/>
+        <segue reference="YPV-Ab-phV"/>
+        <segue reference="baq-Vz-gRt"/>
+        <segue reference="iWa-yD-71V"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Skinsight-logo-s" width="206.38999938964844" height="206.53999328613281"/>
