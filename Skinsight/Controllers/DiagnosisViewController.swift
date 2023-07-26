@@ -12,6 +12,6 @@ class DiagnosisViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
+
 }
