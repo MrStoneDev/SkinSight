@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     let grayColor = UIColor(red: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0)
     let blueColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
@@ -106,6 +106,14 @@ class SignUpViewController: UIViewController {
         toSignInButton.addTarget(self, action: #selector(toSignInButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(toSignInButton)
+        
+        // Set the view controller as the delegate for the text fields
+        userTextField.delegate = self
+        passwordTextField.delegate = self
+
+        // Add a tap gesture recognizer to dismiss the keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
     
@@ -165,5 +173,18 @@ class SignUpViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             self.toSignInButton.setTitleColor(self.skinsightColor, for: .normal)
         }
+    }
+    
+    
+    //MARK: - Dismiss Keyboard
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // This method gets called when the "Return" key is pressed on the keyboard
+        textField.resignFirstResponder()
+        return true
     }
 }
