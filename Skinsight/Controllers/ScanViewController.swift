@@ -130,11 +130,12 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 // Parse the JSON response and extract the diagnosis
                 let diagnosis = self.extractDiagnosis(from: responseString)
 
-                // Switch to the Diagnosis tab and pass the diagnosis data on the main thread
+                // Switch to the Diagnosis tab and pass the diagnosis and selectedImage on the main thread
                 DispatchQueue.main.async {
                     if let tabBarController = self.tabBarController,
                        let diagnosisViewController = tabBarController.viewControllers?[0] as? DiagnosisViewController {
                         diagnosisViewController.diagnosis = diagnosis
+                        diagnosisViewController.imageView.image = image
                         tabBarController.selectedIndex = 0 // Switch to the first tab (index 0) where DiagnosisViewController is located
                     }
                 }

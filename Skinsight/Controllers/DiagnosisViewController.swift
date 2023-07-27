@@ -10,6 +10,7 @@ import UIKit
 class DiagnosisViewController: UIViewController {
     
     let diagnosisLabel = UILabel()
+    var imageView: UIImageView = UIImageView()
     var diagnosis: String? {
         didSet {
             DispatchQueue.main.async {
@@ -28,9 +29,13 @@ class DiagnosisViewController: UIViewController {
         diagnosisLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(diagnosisLabel)
         
+        imageView.contentMode = .scaleAspectFit
+        imageView.frame = CGRect(x: 50, y: 100, width: 200, height: 200) // Adjust the frame as needed
+        view.addSubview(imageView)
+        
         NSLayoutConstraint.activate([
             diagnosisLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            diagnosisLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100) // Adjust the constant value as needed
+            diagnosisLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100)
         ])
     }
 
