@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		851764592A70586C00E959E8 /* CircleButtonWithCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851764582A70586C00E959E8 /* CircleButtonWithCross.swift */; };
-		8517645D2A705E1700E959E8 /* CustomModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517645C2A705E1700E959E8 /* CustomModalView.swift */; };
+		8517645D2A705E1700E959E8 /* UpdateModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517645C2A705E1700E959E8 /* UpdateModalView.swift */; };
 		8533622B2A6600E9003127A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533622A2A6600E9003127A2 /* AppDelegate.swift */; };
 		8533622D2A6600E9003127A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533622C2A6600E9003127A2 /* SceneDelegate.swift */; };
 		853362322A6600E9003127A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853362302A6600E9003127A2 /* Main.storyboard */; };
@@ -25,11 +25,12 @@
 		85E1FD562A6C9FC000C2DFF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FD552A6C9FC000C2DFF1 /* ProfileViewController.swift */; };
 		85E1FD582A6CA00800C2DFF1 /* DiagnosisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FD572A6CA00800C2DFF1 /* DiagnosisViewController.swift */; };
 		85E1FD5C2A6CB4EC00C2DFF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856D4E452A67B36A002034D6 /* Assets.xcassets */; };
+		85F43DAF2A7330BD0052E81A /* TermsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F43DAE2A7330BD0052E81A /* TermsModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		851764582A70586C00E959E8 /* CircleButtonWithCross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonWithCross.swift; sourceTree = "<group>"; };
-		8517645C2A705E1700E959E8 /* CustomModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalView.swift; sourceTree = "<group>"; };
+		8517645C2A705E1700E959E8 /* UpdateModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateModalView.swift; sourceTree = "<group>"; };
 		853362272A6600E9003127A2 /* Skinsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skinsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8533622A2A6600E9003127A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8533622C2A6600E9003127A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		85E1FD532A6C9F6C00C2DFF1 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		85E1FD552A6C9FC000C2DFF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		85E1FD572A6CA00800C2DFF1 /* DiagnosisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosisViewController.swift; sourceTree = "<group>"; };
+		85F43DAE2A7330BD0052E81A /* TermsModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,8 @@
 			children = (
 				853362352A6600EA003127A2 /* LaunchScreen.storyboard */,
 				853362302A6600E9003127A2 /* Main.storyboard */,
-				8517645C2A705E1700E959E8 /* CustomModalView.swift */,
+				8517645C2A705E1700E959E8 /* UpdateModalView.swift */,
+				85F43DAE2A7330BD0052E81A /* TermsModalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,10 +215,11 @@
 				85D3756C2A6885C30056CE79 /* SignInViewController.swift in Sources */,
 				85E1FD4E2A6C9D8900C2DFF1 /* TabBarController.swift in Sources */,
 				85E1FD562A6C9FC000C2DFF1 /* ProfileViewController.swift in Sources */,
+				85F43DAF2A7330BD0052E81A /* TermsModalView.swift in Sources */,
 				856D4E402A676A74002034D6 /* SignUpViewController.swift in Sources */,
 				859695CC2A6735DE00B31C6F /* HomeViewController.swift in Sources */,
 				853362432A660D2B003127A2 /* ImageUploader.swift in Sources */,
-				8517645D2A705E1700E959E8 /* CustomModalView.swift in Sources */,
+				8517645D2A705E1700E959E8 /* UpdateModalView.swift in Sources */,
 				851764592A70586C00E959E8 /* CircleButtonWithCross.swift in Sources */,
 				8533622B2A6600E9003127A2 /* AppDelegate.swift in Sources */,
 				8533622D2A6600E9003127A2 /* SceneDelegate.swift in Sources */,

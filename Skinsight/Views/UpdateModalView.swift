@@ -7,11 +7,12 @@
 
 import UIKit
 
-class CustomModalView: UIView {
+class UpdateModalView: UIView {
     
     // Define UI elements
     let label: UILabel = {
         let label = UILabel()
+        label.text = "Upload the\nimage you want\nto be scanned"
         label.textAlignment = .center
         label.font = UIFont(name: "Lato-Regular", size: 18.0)
         label.textColor = .black
@@ -82,10 +83,5 @@ class CustomModalView: UIView {
             selectImageButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             selectImageButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
-    }
-    
-    // Update label text
-    func updateLabelText(text: String) {
-        label.text = text
     }
 }

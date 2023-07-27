@@ -10,7 +10,7 @@ import UIKit
 class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let imageUploader = ImageUploader()
-    var customModalView: CustomModalView!
+    var customModalView: UpdateModalView!
     
     let circleButton = CircleButtonWithCross(frame: CGRect(x: 0, y: 0, width: 47, height: 47))
     
@@ -51,7 +51,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         view.addSubview(circleButton)
         
         // Create the custom modal view and hide it initially
-        customModalView = CustomModalView(frame: CGRect(x: 45, y: 200, width: 330, height: 350))
+        customModalView = UpdateModalView(frame: CGRect(x: 45, y: 200, width: 330, height: 350))
         customModalView.alpha = 0.0
         view.addSubview(customModalView)
         
@@ -76,9 +76,6 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.customModalView.alpha = 1.0
         }
         view.bringSubviewToFront(customModalView)
-        
-        // Update label text
-        customModalView.updateLabelText(text: "Upload the\nimage you want\nto be scanned")
         
         // Add actions to buttons
         customModalView.closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
