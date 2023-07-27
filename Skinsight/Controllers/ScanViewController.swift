@@ -112,6 +112,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             imageView.image = selectedImage
         }
         picker.dismiss(animated: true, completion: nil)
+        
+        // Close the modal automatically after image selection
+        closeButtonTapped()
     }
     
     @objc func uploadImage() {
