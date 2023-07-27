@@ -30,7 +30,6 @@ class TabBarController: UITabBarController {
         
         // Customize the appearance of the tab bar
         let tabBarAppearance = UITabBarAppearance()
-//        tabBarAppearance.configureWithOpaqueBackground()
         tabBarAppearance.backgroundColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
 
         // Apply the customized appearance to the tab bar
