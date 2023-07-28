@@ -115,6 +115,14 @@ class DiagnosisViewController: UIViewController {
             self.termsModalView.alpha = 1.0
         }
         view.bringSubviewToFront(termsModalView)
+        
+        // Set the large text for the largeTextLabel in the modal view
+        let largeText = "Introduction\n\nWelcome to our mobile application focused on health. By downloading and using our app, you agree to the following terms and conditions.\n\nUse of the App\n\nOur app uses AI technology to analyze images of skin conditions and detect the possibility of benign diseases, such as skin cancer. By using our app, you agree to allow us to access your camera, location, and other user data, such as age, gender, and the images you take.\n\nPrivacy Policy\n\nWe take your privacy seriously and will only use your data for the purpose of improving our service. We may collect and use your data to train our AI to be more accurate in detecting diseases. We will not share your data with any third parties without your consent.\n\nDisclaimer\n\nOur app is not a substitute for professional medical advice and should not be used as such. The results of our analysis are based on AI technology and should be confirmed by a medical professional.\n\nAcceptance of Terms\n\nBy downloading and using our app, you acknowledge that you have read and agree to these terms and conditions. If you do not agree to these terms and conditions, please do not use our app.\n\nContact Us\n\nIf you have any questions or concerns about our app or these terms and conditions, please contact us at mario.alvarado.isw@gmail.com"
+        
+        termsModalView.largeTextLabel.text = largeText
+        
+        // Update the scrollView's contentSize to fit the largeTextLabel's content
+        termsModalView.scrollView.contentSize = CGSize(width: termsModalView.largeTextLabel.frame.width, height: termsModalView.largeTextLabel.frame.height + 40)
     }
     
     @objc func acceptTapped() {
