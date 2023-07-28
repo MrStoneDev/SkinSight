@@ -9,6 +9,9 @@ import UIKit
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var pleaseLabel: UILabel!
+    @IBOutlet weak var orLabel: UILabel!
+    
     let grayColor = UIColor(red: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0)
     let blueColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
     let borderColor = UIColor(red: 163.0/255.0, green: 148.0/255.0, blue: 148.0/255.0, alpha: 1.0)
@@ -27,6 +30,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         // User Text Field
         let userTextField = createTextField(frame: CGRect(x: 67, y: 293, width: 280, height: 55), placeholder: "Username")
+        userTextField.translatesAutoresizingMaskIntoConstraints = false
         
         let userLeftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 55))
         userTextField.leftView = userLeftPaddingView
@@ -37,6 +41,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         // E-mail Text Field
         let emailTextField = createTextField(frame: CGRect(x: 67, y: 370, width: 280, height: 55), placeholder: "E-mail")
+        emailTextField.translatesAutoresizingMaskIntoConstraints = false
         
         let emailLeftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 55))
         emailTextField.leftView = emailLeftPaddingView
@@ -47,6 +52,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         // Password Text Field
         let passwordTextField = createTextField(frame: CGRect(x: 67, y: 447, width: 280, height: 55), placeholder: "Password")
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         
         let passwordLeftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 55))
         passwordTextField.leftView = passwordLeftPaddingView
@@ -61,7 +67,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         signUpButton.backgroundColor = blueColor
         signUpButton.layer.cornerRadius = 20
-        signUpButton.frame = CGRect(x: 130, y: 535, width: 150, height: 40)
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
         
         signUpButton.addTarget(self, action: #selector(signUpButtonTouchDown), for: .touchDown)
         
@@ -70,17 +76,21 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         // Separator
         lineSeparator.backgroundColor = borderColor
+        lineSeparator.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(lineSeparator)
         
         
         // "Sign up with Google" button
         let signUpGoogle = createCustomButton(imageName: "google_icon", title: "Sign up with Google", position: CGPoint(x: 67, y: 680))
+        signUpGoogle.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(signUpGoogle)
 
         
         // "Sign up with Facebook" button
         let signUpFacebook = createCustomButton(imageName: "facebook_icon", title: "Sign up with Facebook", position: CGPoint(x: 67, y: 730))
+        signUpFacebook.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(signUpFacebook)
         
@@ -90,7 +100,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         accountLabel.numberOfLines = 2
         
         accountLabel.font = UIFont(name: "Lato-Regular", size: 14.0)
-        accountLabel.frame = CGRect(x: 159, y: 790, width: 200, height: 40)
+        accountLabel.translatesAutoresizingMaskIntoConstraints = false
        
         self.view.addSubview(accountLabel)
         
@@ -100,13 +110,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         toSignInButton.setTitleColor(blueColor, for: .normal)
         
         toSignInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
-        toSignInButton.frame = CGRect(x: 137, y: 798, width: 200, height: 40)
+        toSignInButton.translatesAutoresizingMaskIntoConstraints = false
         
         toSignInButton.addTarget(self, action: #selector(toSignInButtonTapped), for: .touchUpInside)
         toSignInButton.addTarget(self, action: #selector(toSignInButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(toSignInButton)
-        
+         
         // Set the view controller as the delegate for the text fields
         userTextField.delegate = self
         passwordTextField.delegate = self
@@ -114,6 +124,65 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         // Add a tap gesture recognizer to dismiss the keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
+        
+        
+        // Set Auto Layout Constraints
+        NSLayoutConstraint.activate([
+            // User Text Field Constraints
+            userTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            userTextField.topAnchor.constraint(equalTo: pleaseLabel.bottomAnchor, constant: 40), // Distance from pleaseLabel
+            userTextField.widthAnchor.constraint(equalToConstant: 280),
+            userTextField.heightAnchor.constraint(equalToConstant: 55),
+            
+            // E-mail Text Field Constraints
+            emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            emailTextField.topAnchor.constraint(equalTo: userTextField.bottomAnchor, constant: 20), // Distance from user
+            emailTextField.widthAnchor.constraint(equalToConstant: 280),
+            emailTextField.heightAnchor.constraint(equalToConstant: 55),
+            
+            // Password Text Field Constraints
+            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20), // Distance from email
+            passwordTextField.widthAnchor.constraint(equalToConstant: 280),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 55),
+            
+            // Sign up Button Constraints
+            signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            signUpButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 35), // Distance from password
+            signUpButton.widthAnchor.constraint(equalToConstant: 150),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            // Or Label Constraints
+            orLabel.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 35), // Distance from signup button
+            
+            // Separator Constraints
+            lineSeparator.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            lineSeparator.topAnchor.constraint(equalTo: orLabel.bottomAnchor, constant: 5), // Distance from Or label
+            lineSeparator.widthAnchor.constraint(equalToConstant: 190),
+            lineSeparator.heightAnchor.constraint(equalToConstant: 1),
+            
+            // "Sign up with Google" button Constraints
+            signUpGoogle.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            signUpGoogle.topAnchor.constraint(equalTo: lineSeparator.bottomAnchor, constant: 35), // Distance from line separator
+            signUpGoogle.widthAnchor.constraint(equalToConstant: 280),
+            signUpGoogle.heightAnchor.constraint(equalToConstant: 40),
+            
+            // "Sign up with Facebook" button Constraints
+            signUpFacebook.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            signUpFacebook.topAnchor.constraint(equalTo: signUpGoogle.bottomAnchor, constant: 10), // Distance from google
+            signUpFacebook.widthAnchor.constraint(equalToConstant: 280),
+            signUpFacebook.heightAnchor.constraint(equalToConstant: 40),
+            
+            // Account label Constraints
+            accountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            accountLabel.topAnchor.constraint(equalTo: signUpFacebook.bottomAnchor, constant: 20), // Distance from facebook
+            
+            // toSignIn button Constraints
+            toSignInButton.topAnchor.constraint(equalTo: signUpFacebook.bottomAnchor, constant: 35), // Distance from facebook
+            toSignInButton.leftAnchor.constraint(equalTo: view.centerXAnchor, constant: 5),
+            toSignInButton.widthAnchor.constraint(equalToConstant: 50),
+            toSignInButton.heightAnchor.constraint(equalToConstant: 20),
+        ])
     }
     
     
