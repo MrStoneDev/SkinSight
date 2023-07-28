@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     let signInButton = UIButton(type: .custom)
     let signUpButton = UIButton(type: .custom)
     
@@ -22,10 +24,10 @@ class HomeViewController: UIViewController {
         // Sign In Button
         signInButton.setTitle("Sign in", for: .normal)
         signInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
-        
         signInButton.backgroundColor = skinsightColor
         signInButton.layer.cornerRadius = 20
-        signInButton.frame = CGRect(x: 130, y: 670, width: 150, height: 40)
+        
+        signInButton.translatesAutoresizingMaskIntoConstraints = false // Important to use Auto Layout
         
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(signInButtonTouchDown), for: .touchDown)
@@ -37,16 +39,29 @@ class HomeViewController: UIViewController {
         signUpButton.setTitle("Sign up", for: .normal)
         signUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
         signUpButton.setTitleColor(skinsightColor, for: .normal)
-        
         signUpButton.layer.cornerRadius = 15
         signUpButton.layer.borderColor = skinsightColor.cgColor
         signUpButton.layer.borderWidth = 1
-        signUpButton.frame = CGRect(x: 130, y: 730, width: 150, height: 40)
+        
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false // Important to use Auto Layout
         
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTouchDown), for: .touchDown)
         
         self.view.addSubview(signUpButton)
+        
+        // Set Auto Layout Constraints
+        NSLayoutConstraint.activate([
+            signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            signInButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 50), // Distance from the top label
+            signInButton.widthAnchor.constraint(equalToConstant: 150), // Width constraint
+            signInButton.heightAnchor.constraint(equalToConstant: 40), // Height constraint
+            
+            signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20), // Distance from the sign-in button
+            signUpButton.widthAnchor.constraint(equalToConstant: 150), // Width constraint
+            signUpButton.heightAnchor.constraint(equalToConstant: 40), // Height constraint
+        ])
     }
     
     

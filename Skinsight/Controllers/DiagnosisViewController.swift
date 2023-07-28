@@ -79,13 +79,18 @@ class DiagnosisViewController: UIViewController {
         // Add the overlay view before the modal view
         view.insertSubview(overlayView, belowSubview: termsModalView)
         
+        
+        // Set Auto Layout Constraints
         NSLayoutConstraint.activate([
-            diagnosisLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            diagnosisLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
             diagnosisLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            
             termsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             termsButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             termsButton.widthAnchor.constraint(equalToConstant: 200),
-            termsButton.heightAnchor.constraint(equalToConstant: 50)
+            termsButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            
         ])
     }
     
