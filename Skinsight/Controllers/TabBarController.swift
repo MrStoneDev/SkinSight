@@ -21,20 +21,15 @@ class TabBarController: UITabBarController {
         let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileID") as! ProfileViewController
 
         // Set up each view controller as a tab item
-        diagnosisVC.tabBarItem = UITabBarItem(title: "Diagnosis", image: UIImage(named: "diagnosis_icon")?.withRenderingMode(.alwaysOriginal), tag: 0)
-        scanVC.tabBarItem = UITabBarItem(title: "Scan", image: UIImage(named: "scan_icon")?.withRenderingMode(.alwaysOriginal), tag: 1)
-        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile_icon")?.withRenderingMode(.alwaysOriginal), tag: 2)
+        diagnosisVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "diagnosis_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "diagnosis_selected")?.withRenderingMode(.alwaysOriginal))
+        scanVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "scan_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "scan_selected")?.withRenderingMode(.alwaysOriginal))
+        profileVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "profile_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "profile_selected")?.withRenderingMode(.alwaysOriginal))
 
         // Set the view controllers for the tab bar controller
         self.viewControllers = [diagnosisVC, scanVC, profileVC]
-        
-        // Customize the appearance of the tab bar
-        let tabBarAppearance = UITabBarAppearance()
-        tabBarAppearance.backgroundColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
 
-        // Apply the customized appearance to the tab bar
-        self.tabBar.standardAppearance = tabBarAppearance
-        self.tabBar.scrollEdgeAppearance = tabBarAppearance
-        
+        // Set the custom TabBar subclass
+        self.setValue(CustomTabBar(), forKey: "tabBar")
     }
 }
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8507C8652A74560B001E8A03 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8507C8642A74560B001E8A03 /* CustomTabBar.swift */; };
 		851764592A70586C00E959E8 /* CircleButtonWithCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851764582A70586C00E959E8 /* CircleButtonWithCross.swift */; };
 		8517645D2A705E1700E959E8 /* UpdateModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517645C2A705E1700E959E8 /* UpdateModalView.swift */; };
 		8533622B2A6600E9003127A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533622A2A6600E9003127A2 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8507C8642A74560B001E8A03 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		851764582A70586C00E959E8 /* CircleButtonWithCross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonWithCross.swift; sourceTree = "<group>"; };
 		8517645C2A705E1700E959E8 /* UpdateModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateModalView.swift; sourceTree = "<group>"; };
 		853362272A6600E9003127A2 /* Skinsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skinsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 			children = (
 				853362422A660D2B003127A2 /* ImageUploader.swift */,
 				851764582A70586C00E959E8 /* CircleButtonWithCross.swift */,
+				8507C8642A74560B001E8A03 /* CustomTabBar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				85D3756C2A6885C30056CE79 /* SignInViewController.swift in Sources */,
 				85E1FD4E2A6C9D8900C2DFF1 /* TabBarController.swift in Sources */,
+				8507C8652A74560B001E8A03 /* CustomTabBar.swift in Sources */,
 				85E1FD562A6C9FC000C2DFF1 /* ProfileViewController.swift in Sources */,
 				85F43DAF2A7330BD0052E81A /* TermsModalView.swift in Sources */,
 				856D4E402A676A74002034D6 /* SignUpViewController.swift in Sources */,

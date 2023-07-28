@@ -41,6 +41,10 @@ class DiagnosisViewController: UIViewController {
         
         // Diagnosis label
         diagnosisLabel.text = diagnosis ?? "No diagnosis" // Set the label text to the diagnosis if available, otherwise, show "No diagnosis"
+        diagnosisLabel.textAlignment = .center
+        diagnosisLabel.numberOfLines = 0 // Allow multiple lines
+        diagnosisLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        
         diagnosisLabel.font = UIFont(name: "Lato-Regular", size: 20.0)
         diagnosisLabel.textColor = UIColor.black
         
@@ -86,7 +90,9 @@ class DiagnosisViewController: UIViewController {
             
             // Diagnosis label Constraints
             diagnosisLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            diagnosisLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30),
+            diagnosisLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            diagnosisLabel.widthAnchor.constraint(equalToConstant: 250),
+            diagnosisLabel.heightAnchor.constraint(equalToConstant: 100),
             
             // Terms & Conditions button Constraints
             termsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
