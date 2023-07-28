@@ -12,7 +12,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var startLabel: UILabel!
     
     let imageUploader = ImageUploader()
-    var customModalView: UpdateModalView!
+    var updateModalView: UpdateModalView!
     
     let circleButton = CircleButtonWithCross(frame: CGRect(x: 0, y: 0, width: 47, height: 47))
     
@@ -55,12 +55,14 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         view.addSubview(circleButton)
         
         // Create the custom modal view and hide it initially
-        customModalView = UpdateModalView(frame: CGRect(x: 45, y: 200, width: 330, height: 350))
-        customModalView.alpha = 0.0
-        view.addSubview(customModalView)
+        updateModalView = UpdateModalView(frame: CGRect(x: 45, y: 200, width: 330, height: 350))
+        updateModalView.alpha = 0.0
+        updateModalView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(updateModalView)
         
         // Add the overlay view before the modal view
-        view.insertSubview(overlayView, belowSubview: customModalView)
+        view.insertSubview(overlayView, belowSubview: updateModalView)
         
         uploadButton.setTitle("Upload Image", for: .normal)
         uploadButton.translatesAutoresizingMaskIntoConstraints = false
@@ -83,6 +85,12 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             uploadButton.topAnchor.constraint(equalTo: circleButton.bottomAnchor, constant: 30), // Distance from + button
             uploadButton.widthAnchor.constraint(equalToConstant: 100),
             uploadButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            // Update modal Constraints
+            updateModalView.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            updateModalView.centerYAnchor.constraint(equalTo: view.centerYAnchor), // Center vertically
+            updateModalView.widthAnchor.constraint(equalToConstant: 330),
+            updateModalView.heightAnchor.constraint(equalToConstant: 350),
         ])
         
     }
@@ -95,14 +103,14 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         // Show the modal view with animation and bring it to the front
         UIView.animate(withDuration: 0.3) {
-            self.customModalView.alpha = 1.0
+            self.updateModalView.alpha = 1.0
         }
-        view.bringSubviewToFront(customModalView)
+        view.bringSubviewToFront(updateModalView)
         
         // Add actions to buttons
-        customModalView.closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-        customModalView.takePhotoButton.addTarget(self, action: #selector(takePhotoButtonTapped), for: .touchUpInside)
-        customModalView.selectImageButton.addTarget(self, action: #selector(selectImageButtonTapped), for: .touchUpInside)
+        updateModalView.closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        updateModalView.takePhotoButton.addTarget(self, action: #selector(takePhotoButtonTapped), for: .touchUpInside)
+        updateModalView.selectImageButton.addTarget(self, action: #selector(selectImageButtonTapped), for: .touchUpInside)
     }
     
     @objc func takePhotoButtonTapped() {
@@ -121,7 +129,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         // Hide the modal view with animation
         UIView.animate(withDuration: 0.3) {
-            self.customModalView.alpha = 0.0
+            self.updateModalView.alpha = 0.0
         }
     }
     

@@ -215,9 +215,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-WC-ha4">
-                                <rect key="frame" x="165" y="118" width="85" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-WC-ha4">
+                                <rect key="frame" x="164.5" y="73" width="85" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -225,6 +224,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="54I-dT-WWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dlG-WC-ha4" firstAttribute="top" secondItem="54I-dT-WWS" secondAttribute="top" constant="25" id="jMd-AW-BCa"/>
+                            <constraint firstItem="dlG-WC-ha4" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="vX5-Ap-TUD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zus-Pb-oFY"/>
                 </viewController>
