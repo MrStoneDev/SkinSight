@@ -9,6 +9,8 @@ import UIKit
 
 class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var startLabel: UILabel!
+    
     let imageUploader = ImageUploader()
     var customModalView: UpdateModalView!
     
@@ -35,6 +37,8 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Set up the imageView
         imageView.frame = CGRect(x: 50, y: 100, width: 200, height: 200)
         imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(imageView)
         
         // Set up the imagePicker for photo library
@@ -59,9 +63,27 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         view.insertSubview(overlayView, belowSubview: customModalView)
         
         uploadButton.setTitle("Upload Image", for: .normal)
+        uploadButton.translatesAutoresizingMaskIntoConstraints = false
+        
         uploadButton.addTarget(self, action: #selector(uploadImage), for: .touchUpInside)
-        uploadButton.frame = CGRect(x: 60, y: 520, width: 200, height: 50)
+        
         view.addSubview(uploadButton)
+        
+        // Set Auto Layout Constraints
+        NSLayoutConstraint.activate([
+            
+            // Image view Constraints
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            imageView.bottomAnchor.constraint(equalTo: uploadButton.topAnchor, constant: -40), // Distance from upload button
+            imageView.widthAnchor.constraint(equalToConstant: 250),
+            imageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            // Upload button Constraints
+            uploadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+            uploadButton.topAnchor.constraint(equalTo: circleButton.bottomAnchor, constant: 30), // Distance from + button
+            uploadButton.widthAnchor.constraint(equalToConstant: 100),
+            uploadButton.heightAnchor.constraint(equalToConstant: 40),
+        ])
         
     }
     
@@ -107,6 +129,8 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
             imageView.image = selectedImage
+            circleButton.isHidden = true // Hide the circleButton
+            startLabel.isHidden = true // Hide the startLabel
         }
         picker.dismiss(animated: true, completion: nil)
         
@@ -134,6 +158,10 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                         diagnosisViewController.diagnosis = diagnosis
                         diagnosisViewController.imageView.image = image
                         tabBarController.selectedIndex = 0 // Switch to the first tab (index 0) where DiagnosisViewController is located
+                        // Show the circleButton and startLabel again when the uploadButton is tapped
+                        self.circleButton.isHidden = false
+                        self.startLabel.isHidden = false
+                        self.imageView.image = nil
                     }
                 }
 
