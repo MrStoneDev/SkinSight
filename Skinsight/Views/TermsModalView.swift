@@ -52,14 +52,15 @@ class TermsModalView: UIView {
         acceptButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
-            acceptButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
-            acceptButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            acceptButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
+            // Terms & Conditions Label Constraints
+            label.centerXAnchor.constraint(equalTo: centerXAnchor), // Center horizontally
+            label.topAnchor.constraint(equalTo: topAnchor, constant: 20), // Distance from top
+            
+            
+            // Accept button Constraints
+            acceptButton.centerXAnchor.constraint(equalTo: centerXAnchor), // Center horizontally
+            acceptButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5) // Distance from bottom
         ])
     }
 }

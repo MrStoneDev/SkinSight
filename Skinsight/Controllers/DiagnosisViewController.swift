@@ -9,11 +9,12 @@ import UIKit
 
 class DiagnosisViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
     let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
     
     let diagnosisLabel = UILabel()
-    var imageView: UIImageView = UIImageView()
     
     let termsButton = UIButton(type: .custom)
     
@@ -47,11 +48,6 @@ class DiagnosisViewController: UIViewController {
         
         view.addSubview(diagnosisLabel)
         
-        // Image View
-        imageView.contentMode = .scaleAspectFit
-        imageView.frame = CGRect(x: 50, y: 100, width: 200, height: 200) // Adjust the frame as needed
-        view.addSubview(imageView)
-        
         // Terms & Conditions button
         termsButton.setTitle("Terms & Conditions", for: .normal)
         termsButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 14.0)
@@ -68,7 +64,8 @@ class DiagnosisViewController: UIViewController {
         view.addSubview(termsButton)
         
         // Create the custom modal view and hide it initially
-        termsModalView = TermsModalView(frame: CGRect(x: 45, y: 200, width: 330, height: 350))
+        termsModalView = TermsModalView()
+        termsModalView.translatesAutoresizingMaskIntoConstraints = false
         termsModalView.alpha = 0.0
         
         view.addSubview(termsModalView)
@@ -82,15 +79,27 @@ class DiagnosisViewController: UIViewController {
         
         // Set Auto Layout Constraints
         NSLayoutConstraint.activate([
+
+            // Image View Constraints
+            imageView.widthAnchor.constraint(equalToConstant: 250),
+            imageView.heightAnchor.constraint(equalToConstant: 250),
+            
+            // Diagnosis label Constraints
             diagnosisLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            diagnosisLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            diagnosisLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30),
             
+            // Terms & Conditions button Constraints
             termsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            termsButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            termsButton.widthAnchor.constraint(equalToConstant: 200),
-            termsButton.heightAnchor.constraint(equalToConstant: 50),
+            termsButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            termsButton.widthAnchor.constraint(equalToConstant: 150),
+            termsButton.heightAnchor.constraint(equalToConstant: 30),
             
-            
+            // Terms & Conditions modal Constraints
+            termsModalView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            termsModalView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            termsModalView.widthAnchor.constraint(equalToConstant: 330),
+            termsModalView.heightAnchor.constraint(equalToConstant: 350),
+
         ])
     }
     
