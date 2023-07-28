@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         // Sign In Button
         signInButton.setTitle("Sign in", for: .normal)
         signInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
+        
         signInButton.backgroundColor = skinsightColor
         signInButton.layer.cornerRadius = 20
         
@@ -39,6 +40,7 @@ class HomeViewController: UIViewController {
         signUpButton.setTitle("Sign up", for: .normal)
         signUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
         signUpButton.setTitleColor(skinsightColor, for: .normal)
+        
         signUpButton.layer.cornerRadius = 15
         signUpButton.layer.borderColor = skinsightColor.cgColor
         signUpButton.layer.borderWidth = 1

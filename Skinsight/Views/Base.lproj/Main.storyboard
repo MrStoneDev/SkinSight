@@ -98,17 +98,17 @@
             <objects>
                 <viewController id="VaK-Bg-Axn" customClass="SignUpViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ui-Xr-czf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9t-ut-769">
-                                <rect key="frame" x="120.5" y="25" width="173" height="36"/>
+                                <rect key="frame" x="120.5" y="117" width="173" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, fill in the form to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wm-JI-J5I">
-                                <rect key="frame" x="103.5" y="99" width="207" height="17"/>
+                                <rect key="frame" x="103.5" y="191" width="207" height="17"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -147,17 +147,17 @@
             <objects>
                 <viewController id="6If-WX-iuO" customClass="SignInViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QSC-Lh-DTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO1-a5-0iN">
-                                <rect key="frame" x="106.5" y="25" width="201" height="36"/>
+                                <rect key="frame" x="106.5" y="117" width="201" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, sign in to your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-M5-c70">
-                                <rect key="frame" x="114.5" y="99" width="185" height="17"/>
+                                <rect key="frame" x="114.5" y="191" width="185" height="17"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -244,20 +244,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Skinsight-logo-s" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-bh-Lvs">
-                                <rect key="frame" x="104" y="334" width="206" height="85"/>
+                                <rect key="frame" x="104" y="292" width="206" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="5vS-bL-6l1"/>
                                     <constraint firstAttribute="width" constant="206" id="EK8-Hc-EIL"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SkinSight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-dO-Qsc">
-                                <rect key="frame" x="142" y="449" width="130" height="39"/>
+                                <rect key="frame" x="142" y="407" width="130" height="39"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="32"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover, protect, prevent: SkinSight, the power of AI skin detection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCB-ux-If2">
-                                <rect key="frame" x="100.5" y="518" width="213" height="66"/>
+                                <rect key="frame" x="100.5" y="476" width="213" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="MZF-D3-hac"/>
                                     <constraint firstAttribute="width" constant="213" id="NPO-9W-vgC"/>
@@ -272,7 +272,7 @@
                         <constraints>
                             <constraint firstItem="hsr-dO-Qsc" firstAttribute="top" secondItem="8Wd-bh-Lvs" secondAttribute="bottom" constant="30" id="012-wJ-Pah"/>
                             <constraint firstItem="UCB-ux-If2" firstAttribute="centerX" secondItem="uzl-KG-6tN" secondAttribute="centerX" id="2tT-9Q-he1"/>
-                            <constraint firstItem="8Wd-bh-Lvs" firstAttribute="top" secondItem="Rcb-Hp-o59" secondAttribute="top" constant="242" id="4Dq-ZB-xdw"/>
+                            <constraint firstItem="8Wd-bh-Lvs" firstAttribute="top" secondItem="Rcb-Hp-o59" secondAttribute="top" constant="200" id="4Dq-ZB-xdw"/>
                             <constraint firstItem="8Wd-bh-Lvs" firstAttribute="centerX" secondItem="uzl-KG-6tN" secondAttribute="centerX" id="EfY-OF-nML"/>
                             <constraint firstItem="hsr-dO-Qsc" firstAttribute="centerX" secondItem="uzl-KG-6tN" secondAttribute="centerX" id="f26-Nt-QzJ"/>
                             <constraint firstItem="UCB-ux-If2" firstAttribute="top" secondItem="hsr-dO-Qsc" secondAttribute="bottom" constant="30" id="xk3-Hc-7wb"/>
@@ -312,7 +312,7 @@
             <objects>
                 <viewController id="S9B-jI-Drp" customClass="TabBarController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K6I-X2-Q9o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cef-ot-RuA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -326,8 +326,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YPV-Ab-phV"/>
-        <segue reference="baq-Vz-gRt"/>
-        <segue reference="iWa-yD-71V"/>
+        <segue reference="9T0-1j-nhn"/>
+        <segue reference="2pr-No-inT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Skinsight-logo-s" width="206.38999938964844" height="206.53999328613281"/>
