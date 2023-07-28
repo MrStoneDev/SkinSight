@@ -109,6 +109,8 @@ class DiagnosisViewController: UIViewController {
         ])
     }
     
+    //MARK: - Buttons actions
+    
     @objc func termsTapped() {
         
         // Show the overlay view with animation

@@ -95,6 +95,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
+    
+    //MARK: - Button actions
+    
     @objc func circleButtonTapped() {
         // Show the overlay view with animation
         UIView.animate(withDuration: 0.3) {
@@ -133,6 +136,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    
+    //MARK: - Helper methods
+    
     // Delegate method to handle image selection from the imagePicker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
@@ -145,6 +151,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // Close the modal automatically after image selection
         closeButtonTapped()
     }
+    
     
     @objc func uploadImage() {
         guard let image = imageView.image else {
@@ -183,7 +190,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         }
     }
-
+    
     
     // Helper method to extract the diagnosis from the JSON response
     private func extractDiagnosis(from responseString: String) -> String {
