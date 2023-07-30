@@ -10,6 +10,7 @@ import UIKit
 class DiagnosisViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var yourDiagnosisLabel: UILabel!
     
     let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
     let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
@@ -90,7 +91,7 @@ class DiagnosisViewController: UIViewController {
             
             // Diagnosis label Constraints
             diagnosisLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            diagnosisLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            diagnosisLabel.topAnchor.constraint(equalTo: yourDiagnosisLabel.bottomAnchor, constant: 10),
             diagnosisLabel.widthAnchor.constraint(equalToConstant: 250),
             diagnosisLabel.heightAnchor.constraint(equalToConstant: 100),
             
