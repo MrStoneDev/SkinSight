@@ -31,6 +31,14 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         return overlay
     }()
     
+    lazy var loaderView: UIActivityIndicatorView = {
+        let loader = UIActivityIndicatorView(style: .large)
+        loader.color = .gray
+        loader.hidesWhenStopped = true
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        return loader
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +79,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         view.addSubview(uploadButton)
         
+        // Loader
+        view.addSubview(loaderView)
+        
         // Set Auto Layout Constraints
         NSLayoutConstraint.activate([
             
@@ -91,6 +102,10 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             updateModalView.centerYAnchor.constraint(equalTo: view.centerYAnchor), // Center vertically
             updateModalView.widthAnchor.constraint(equalToConstant: 330),
             updateModalView.heightAnchor.constraint(equalToConstant: 350),
+            
+            // Loader Constraints
+            loaderView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loaderView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
         
     }
@@ -159,8 +174,14 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             return
         }
         
+        // Show the loader
+        loaderView.startAnimating()
+        
         let filename = "uploaded_image.jpg" // You can choose a different filename if needed
         imageUploader.uploadImage(image: image, filename: filename) { result in
+            // Hide the loader regardless of the result
+            self.loaderView.stopAnimating()
+            
             switch result {
             case .success(let responseString):
                 // Parse the JSON response and extract the diagnosis
