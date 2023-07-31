@@ -33,7 +33,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     lazy var loaderView: UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView(style: .large)
-        loader.color = .gray
+        loader.color = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
         loader.hidesWhenStopped = true
         loader.translatesAutoresizingMaskIntoConstraints = false
         return loader
@@ -93,7 +93,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             // Upload button Constraints
             uploadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            uploadButton.topAnchor.constraint(equalTo: circleButton.bottomAnchor, constant: 30), // Distance from + button
+            uploadButton.topAnchor.constraint(equalTo: circleButton.bottomAnchor, constant: 40), // Distance from + button
             uploadButton.widthAnchor.constraint(equalToConstant: 100),
             uploadButton.heightAnchor.constraint(equalToConstant: 40),
             
@@ -105,7 +105,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             // Loader Constraints
             loaderView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loaderView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            loaderView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
         ])
         
     }

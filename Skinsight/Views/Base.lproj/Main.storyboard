@@ -75,7 +75,7 @@
                                 <rect key="frame" x="82" y="179" width="250" height="250"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Diagnosis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bo-nP-gQO">
-                                <rect key="frame" x="139.5" y="469" width="135" height="24"/>
+                                <rect key="frame" x="139.5" y="439" width="135" height="24"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="vDV-Ng-aXq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2Bo-nP-gQO" firstAttribute="top" secondItem="2zR-ay-v93" secondAttribute="bottom" constant="40" id="CeQ-kn-YdE"/>
+                            <constraint firstItem="2Bo-nP-gQO" firstAttribute="top" secondItem="2zR-ay-v93" secondAttribute="bottom" constant="10" id="CeQ-kn-YdE"/>
                             <constraint firstItem="2Bo-nP-gQO" firstAttribute="centerX" secondItem="liw-FI-0jN" secondAttribute="centerX" id="Flt-c4-f42"/>
                             <constraint firstItem="D7C-kW-WbE" firstAttribute="centerX" secondItem="liw-FI-0jN" secondAttribute="centerX" id="HmK-m8-uPX"/>
                             <constraint firstItem="D7C-kW-WbE" firstAttribute="top" secondItem="vDV-Ng-aXq" secondAttribute="top" constant="25" id="KIh-OW-6Sg"/>

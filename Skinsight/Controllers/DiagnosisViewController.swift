@@ -91,7 +91,7 @@ class DiagnosisViewController: UIViewController {
             
             // Diagnosis label Constraints
             diagnosisLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            diagnosisLabel.topAnchor.constraint(equalTo: yourDiagnosisLabel.bottomAnchor, constant: 10),
+            diagnosisLabel.topAnchor.constraint(equalTo: yourDiagnosisLabel.bottomAnchor, constant: 5),
             diagnosisLabel.widthAnchor.constraint(equalToConstant: 250),
             diagnosisLabel.heightAnchor.constraint(equalToConstant: 100),
             
