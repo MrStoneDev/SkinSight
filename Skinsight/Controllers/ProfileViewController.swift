@@ -7,11 +7,11 @@
 
 import UIKit
 
+// This is the controller class for the Profile screen.
 class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
 }

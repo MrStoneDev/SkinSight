@@ -7,20 +7,25 @@
 
 import UIKit
 
+// This is the controller class for the Diagnosis screen.
 class DiagnosisViewController: UIViewController {
     
+    // Create connections from Storyboard.
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var yourDiagnosisLabel: UILabel!
     
+    // Colors to use.
     let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
     let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
     
+    // Create UI elements programmatically.
     let diagnosisLabel = UILabel()
     
     let termsButton = UIButton(type: .custom)
     
-    var termsModalView: TermsModalView!
+    var termsModalView: TermsModalView! // Create an instance from the Terms Modal View.
     
+    // Variable to store the diagnosis received from the Scan screen.
     var diagnosis: String? {
         didSet {
             DispatchQueue.main.async {

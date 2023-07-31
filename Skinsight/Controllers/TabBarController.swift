@@ -7,6 +7,7 @@
 
 import UIKit
 
+// This is a class to create and manage a tab bar, taking the tabs directly from the controllers.
 class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class TabBarController: UITabBarController {
         let scanVC = storyboard.instantiateViewController(withIdentifier: "ScanID") as! ScanViewController
         let profileVC = storyboard.instantiateViewController(withIdentifier: "ProfileID") as! ProfileViewController
 
-        // Set up each view controller as a tab item
+        // Set up each view controller as a tab item, each tab has an icon for unselected, and selected states
         diagnosisVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "diagnosis_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "diagnosis_selected")?.withRenderingMode(.alwaysOriginal))
         scanVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "scan_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "scan_selected")?.withRenderingMode(.alwaysOriginal))
         profileVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "profile_icon")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "profile_selected")?.withRenderingMode(.alwaysOriginal))

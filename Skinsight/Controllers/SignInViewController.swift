@@ -7,19 +7,23 @@
 
 import UIKit
 
+// This is the controller class for the Sign in screen.
 class SignInViewController: UIViewController, UITextFieldDelegate {
     
+    // Connect the UI elements from the storyboard
     @IBOutlet weak var pleaseLabel: UILabel!
     @IBOutlet weak var forgotLabel: UILabel!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var dontLabel: UILabel!
     
+    // Colors to use
     let grayColor = UIColor(red: 232.0/255.0, green: 232.0/255.0, blue: 232.0/255.0, alpha: 1.0)
     let blueColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
     let borderColor = UIColor(red: 163.0/255.0, green: 148.0/255.0, blue: 148.0/255.0, alpha: 1.0)
     let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
     let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
     
+    // Create buttons and separator
     let forgotPasswordButton = UIButton()
     let signInButton = UIButton(type: .custom)
     let toSignUpButton = UIButton()

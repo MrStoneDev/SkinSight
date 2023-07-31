@@ -7,10 +7,13 @@
 
 import UIKit
 
+// This is the controller class for the Scan screen.
 class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // Connection from Storyboard.
     @IBOutlet weak var startLabel: UILabel!
     
+    // Create UI Elements programmatically.
     let imageUploader = ImageUploader()
     var updateModalView: UpdateModalView!
     
@@ -23,7 +26,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let uploadButton = UIButton(type: .system)
     
-    // Create a semi-transparent overlay view
+    // Create a semi-transparent overlay view.
     lazy var overlayView: UIView = {
         let overlay = UIView(frame: view.bounds)
         overlay.backgroundColor = UIColor(white: 0, alpha: 0.5)
@@ -31,6 +34,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         return overlay
     }()
     
+    // Create a loader.
     lazy var loaderView: UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView(style: .large)
         loader.color = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
@@ -132,11 +136,11 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @objc func takePhotoButtonTapped() {
-        present(cameraPicker, animated: true, completion: nil)
+        present(cameraPicker, animated: true, completion: nil) // Open the camera.
     }
     
     @objc func selectImageButtonTapped() {
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true, completion: nil) // Open the photo library.
     }
     
     @objc func closeButtonTapped() {
@@ -167,7 +171,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         closeButtonTapped()
     }
     
-    
+    // Helper function to upload the selected image.
     @objc func uploadImage() {
         guard let image = imageView.image else {
             print("Please select an image first.")
@@ -179,8 +183,6 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         let filename = "uploaded_image.jpg" // You can choose a different filename if needed
         imageUploader.uploadImage(image: image, filename: filename) { result in
-            // Hide the loader regardless of the result
-            self.loaderView.stopAnimating()
             
             switch result {
             case .success(let responseString):
@@ -189,6 +191,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
                 // Switch to the Diagnosis tab and pass the diagnosis and selectedImage on the main thread
                 DispatchQueue.main.async {
+                    // Hide the loader regardless of the result
+                    self.loaderView.stopAnimating()
+                    
                     if let tabBarController = self.tabBarController,
                        let diagnosisViewController = tabBarController.viewControllers?[0] as? DiagnosisViewController {
                         diagnosisViewController.diagnosis = diagnosis

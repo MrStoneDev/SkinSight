@@ -7,16 +7,18 @@
 
 import UIKit
 
+// This is the controller class of the Home screen.
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    // Create the buttons
     let signInButton = UIButton(type: .custom)
     let signUpButton = UIButton(type: .custom)
     
+    // Set the required colors to have a more readable code
     let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
     let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +32,11 @@ class HomeViewController: UIViewController {
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false // Important to use Auto Layout
         
+        // Button actions
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(signInButtonTouchDown), for: .touchDown)
         
-        self.view.addSubview(signInButton)
+        self.view.addSubview(signInButton) // Add the button to the screen
         
 
         // Sign Up Button
@@ -45,7 +48,7 @@ class HomeViewController: UIViewController {
         signUpButton.layer.borderColor = skinsightColor.cgColor
         signUpButton.layer.borderWidth = 1
         
-        signUpButton.translatesAutoresizingMaskIntoConstraints = false // Important to use Auto Layout
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
         
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTouchDown), for: .touchDown)
