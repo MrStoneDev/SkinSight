@@ -21,6 +21,9 @@
 		856D4E442A677CC7002034D6 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 856D4E432A677CC7002034D6 /* Inter-Regular.ttf */; };
 		859695CC2A6735DE00B31C6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859695CB2A6735DE00B31C6F /* HomeViewController.swift */; };
 		85D3756C2A6885C30056CE79 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3756B2A6885C30056CE79 /* SignInViewController.swift */; };
+		85DD14992A7A149600738423 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD14982A7A149600738423 /* Profile.swift */; };
+		85DD149C2A7A163F00738423 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 85DD149B2A7A163F00738423 /* Auth0 */; };
+		85DD149E2A7A181E00738423 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85DD149D2A7A181E00738423 /* Auth0.plist */; };
 		85E1FD4E2A6C9D8900C2DFF1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FD4D2A6C9D8900C2DFF1 /* TabBarController.swift */; };
 		85E1FD542A6C9F6C00C2DFF1 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FD532A6C9F6C00C2DFF1 /* ScanViewController.swift */; };
 		85E1FD562A6C9FC000C2DFF1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FD552A6C9FC000C2DFF1 /* ProfileViewController.swift */; };
@@ -47,6 +50,8 @@
 		856D4E452A67B36A002034D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		859695CB2A6735DE00B31C6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		85D3756B2A6885C30056CE79 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		85DD14982A7A149600738423 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		85DD149D2A7A181E00738423 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		85E1FD4D2A6C9D8900C2DFF1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		85E1FD532A6C9F6C00C2DFF1 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		85E1FD552A6C9FC000C2DFF1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85DD149C2A7A163F00738423 /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,7 @@
 				856D4E3E2A674AC6002034D6 /* Fonts */,
 				853362382A6600EA003127A2 /* Info.plist */,
 				856D4E452A67B36A002034D6 /* Assets.xcassets */,
+				85DD149D2A7A181E00738423 /* Auth0.plist */,
 			);
 			path = Skinsight;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 				853362422A660D2B003127A2 /* ImageUploader.swift */,
 				851764582A70586C00E959E8 /* CircleButtonWithCross.swift */,
 				8507C8642A74560B001E8A03 /* CustomTabBar.swift */,
+				85DD14982A7A149600738423 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +165,9 @@
 			dependencies = (
 			);
 			name = Skinsight;
+			packageProductDependencies = (
+				85DD149B2A7A163F00738423 /* Auth0 */,
+			);
 			productName = Skinsight;
 			productReference = 853362272A6600E9003127A2 /* Skinsight.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 8533621E2A6600E9003127A2;
+			packageReferences = (
+				85DD149A2A7A163F00738423 /* XCRemoteSwiftPackageReference "Auth0" */,
+			);
 			productRefGroup = 853362282A6600E9003127A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,6 +219,7 @@
 				856D4E442A677CC7002034D6 /* Inter-Regular.ttf in Resources */,
 				85E1FD5C2A6CB4EC00C2DFF1 /* Assets.xcassets in Resources */,
 				853362322A6600E9003127A2 /* Main.storyboard in Resources */,
+				85DD149E2A7A181E00738423 /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85D3756C2A6885C30056CE79 /* SignInViewController.swift in Sources */,
+				85DD14992A7A149600738423 /* Profile.swift in Sources */,
 				85E1FD4E2A6C9D8900C2DFF1 /* TabBarController.swift in Sources */,
 				8507C8652A74560B001E8A03 /* CustomTabBar.swift in Sources */,
 				85E1FD562A6C9FC000C2DFF1 /* ProfileViewController.swift in Sources */,
@@ -448,6 +464,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85DD149A2A7A163F00738423 /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85DD149B2A7A163F00738423 /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85DD149A2A7A163F00738423 /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8533621F2A6600E9003127A2 /* Project object */;
 }

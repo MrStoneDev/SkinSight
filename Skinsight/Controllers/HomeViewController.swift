@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Auth0
 
 // This is the controller class of the Home screen.
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var isAuthenticated = false
     
     // Create the buttons
     let signInButton = UIButton(type: .custom)
@@ -33,27 +36,33 @@ class HomeViewController: UIViewController {
         signInButton.translatesAutoresizingMaskIntoConstraints = false // Important to use Auto Layout
         
         // Button actions
-        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+//        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(signInButtonTouchDown), for: .touchDown)
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         
         self.view.addSubview(signInButton) // Add the button to the screen
         
+        if isAuthenticated {
+            performSegue(withIdentifier: "HomeToTabSegue", sender: self)
+        }
+        
 
         // Sign Up Button
-        signUpButton.setTitle("Sign up", for: .normal)
-        signUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
-        signUpButton.setTitleColor(skinsightColor, for: .normal)
+//        signUpButton.setTitle("Sign up", for: .normal)
+//        signUpButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
+//        signUpButton.setTitleColor(skinsightColor, for: .normal)
+//
+//        signUpButton.layer.cornerRadius = 15
+//        signUpButton.layer.borderColor = skinsightColor.cgColor
+//        signUpButton.layer.borderWidth = 1
+//
+//        signUpButton.translatesAutoresizingMaskIntoConstraints = false
         
-        signUpButton.layer.cornerRadius = 15
-        signUpButton.layer.borderColor = skinsightColor.cgColor
-        signUpButton.layer.borderWidth = 1
+//        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+//        signUpButton.addTarget(self, action: #selector(signUpButtonTouchDown), for: .touchDown)
+//
+//        self.view.addSubview(signUpButton)
         
-        signUpButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        signUpButton.addTarget(self, action: #selector(signUpButtonTouchDown), for: .touchDown)
-        
-        self.view.addSubview(signUpButton)
         
         // Set Auto Layout Constraints
         NSLayoutConstraint.activate([
@@ -62,10 +71,10 @@ class HomeViewController: UIViewController {
             signInButton.widthAnchor.constraint(equalToConstant: 150), // Width constraint
             signInButton.heightAnchor.constraint(equalToConstant: 40), // Height constraint
             
-            signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20), // Distance from the sign-in button
-            signUpButton.widthAnchor.constraint(equalToConstant: 150), // Width constraint
-            signUpButton.heightAnchor.constraint(equalToConstant: 40), // Height constraint
+//            signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
+//            signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20), // Distance from the sign-in button
+//            signUpButton.widthAnchor.constraint(equalToConstant: 150), // Width constraint
+//            signUpButton.heightAnchor.constraint(equalToConstant: 40), // Height constraint
         ])
     }
     
@@ -74,7 +83,26 @@ class HomeViewController: UIViewController {
     
     @objc func signInButtonTapped() {
         // Trigger the segue to the Sign In view controller
-        performSegue(withIdentifier: "SignInSegue", sender: self)
+//        performSegue(withIdentifier: "SignInSegue", sender: self)
+        
+        Auth0
+            .webAuth()
+            .start { result in
+                
+                switch result {
+                    
+                case .failure(let error):
+                    // The user pressed "Cancel" on Universal login
+                    // or something unusal happened.
+                    print("Failed with: \(error)")
+                    
+                case .success(let credentials):
+                    self.isAuthenticated = true
+                    print("Credentials: \(credentials)")
+                    print("ID Token: \(credentials.idToken)")
+                }
+                
+            }
     }
 
     @objc func signUpButtonTapped() {
@@ -101,6 +129,49 @@ class HomeViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             self.signUpButton.setTitleColor(self.skinsightColor, for: .normal)
         }
+    }
+    
+    
+    //MARK: - Auth0
+    private func login() {
+        
+        Auth0
+            .webAuth()
+            .start { result in
+                
+                switch result {
+                    
+                case .failure(let error):
+                    // The user pressed "Cancel" on Universal login
+                    // or something unusal happened.
+                    print("Failed with: \(error)")
+                    
+                case .success(let credentials):
+                    self.isAuthenticated = true
+                    print("Credentials: \(credentials)")
+                    print("ID Token: \(credentials.idToken)")
+                }
+                
+            }
+    }
+    
+    private func logout() {
+        
+        Auth0
+            .webAuth()
+            .clearSession { result in
+                
+                switch result {
+                     
+                case .failure(let error):
+                    print("Failed with error \(error)")
+                
+                case .success:
+                    self.isAuthenticated = false
+                    
+                }
+                
+            }
     }
     
 }

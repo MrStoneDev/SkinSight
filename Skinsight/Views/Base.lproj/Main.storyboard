@@ -107,17 +107,17 @@
             <objects>
                 <viewController id="VaK-Bg-Axn" customClass="SignUpViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ui-Xr-czf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9t-ut-769">
-                                <rect key="frame" x="120.5" y="117" width="173" height="36"/>
+                                <rect key="frame" x="120.5" y="25" width="173" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, fill in the form to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wm-JI-J5I">
-                                <rect key="frame" x="103.5" y="191" width="207" height="17"/>
+                                <rect key="frame" x="103.5" y="99" width="207" height="17"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -144,7 +144,6 @@
                         <outlet property="orLabel" destination="5hR-v2-1Zn" id="JIY-Yw-p45"/>
                         <outlet property="pleaseLabel" destination="1wm-JI-J5I" id="L2F-87-I3N"/>
                         <segue destination="6If-WX-iuO" kind="show" identifier="toSignInSegue" id="baq-Vz-gRt"/>
-                        <segue destination="S9B-jI-Drp" kind="show" identifier="upToMainSegue" id="iGq-1P-FUu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBs-e6-Bbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -156,17 +155,17 @@
             <objects>
                 <viewController id="6If-WX-iuO" customClass="SignInViewController" customModule="Skinsight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QSC-Lh-DTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO1-a5-0iN">
-                                <rect key="frame" x="106.5" y="117" width="201" height="36"/>
+                                <rect key="frame" x="106.5" y="25" width="201" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, sign in to your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-M5-c70">
-                                <rect key="frame" x="114.5" y="191" width="185" height="17"/>
+                                <rect key="frame" x="114.5" y="99" width="185" height="17"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -209,7 +208,6 @@
                         <outlet property="orLabel" destination="f0q-u8-Q1M" id="bTj-3z-Riw"/>
                         <outlet property="pleaseLabel" destination="f0f-M5-c70" id="5K4-gN-guN"/>
                         <segue destination="VaK-Bg-Axn" kind="show" identifier="toSignUpSegue" id="iWa-yD-71V"/>
-                        <segue destination="S9B-jI-Drp" kind="show" identifier="inToMainSegue" id="YPV-Ab-phV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6Z-aB-kFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -290,8 +288,7 @@
                     <navigationItem key="navigationItem" id="8NP-Zb-KmI"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="UCB-ux-If2" id="KUA-Z0-Vs2"/>
-                        <segue destination="VaK-Bg-Axn" kind="show" identifier="SignUpSegue" id="2pr-No-inT"/>
-                        <segue destination="6If-WX-iuO" kind="show" identifier="SignInSegue" id="9T0-1j-nhn"/>
+                        <segue destination="S9B-jI-Drp" kind="show" identifier="HomeToTabSegue" id="Mht-Vi-TDB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfG-fh-dIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -334,9 +331,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YPV-Ab-phV"/>
-        <segue reference="9T0-1j-nhn"/>
-        <segue reference="2pr-No-inT"/>
+        <segue reference="baq-Vz-gRt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Skinsight-logo-s" width="206.38999938964844" height="206.53999328613281"/>

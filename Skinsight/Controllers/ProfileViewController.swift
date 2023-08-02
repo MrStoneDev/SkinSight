@@ -9,7 +9,9 @@ import UIKit
 
 // This is the controller class for the Profile screen.
 class ProfileViewController: UIViewController {
-
+    
+    var userProfile = Profile.empty
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
