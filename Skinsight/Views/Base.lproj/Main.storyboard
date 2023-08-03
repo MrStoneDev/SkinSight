@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uO7-sf-6X8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kIN-xb-C2t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiy-GN-fld">
-                                <rect key="frame" x="175.5" y="73" width="63" height="36"/>
+                                <rect key="frame" x="176" y="73" width="62.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2966.666666666667" y="-11.383928571428571"/>
+            <point key="canvasLocation" x="3876.811594202899" y="-11.383928571428571"/>
         </scene>
         <!--Diagnosis View Controller-->
         <scene sceneID="T7L-2p-pDF">
@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnosis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7C-kW-WbE">
-                                <rect key="frame" x="143" y="73" width="128" height="36"/>
+                                <rect key="frame" x="143.5" y="73" width="127.5" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLi-TZ-283" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2967" y="-721"/>
+            <point key="canvasLocation" x="3877" y="-731"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="zZW-0k-hk0">
@@ -116,22 +116,79 @@
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hO1-oY-c9n">
+                                <rect key="frame" x="87" y="157" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-GO-d99">
+                                <rect key="frame" x="50" y="343" width="63" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nickname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMn-jS-l75">
+                                <rect key="frame" x="50" y="383" width="93" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Se-3m-6eT">
+                                <rect key="frame" x="50" y="423" width="58" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-qj-AEq">
+                                <rect key="frame" x="118" y="343" width="47" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDV-3E-VP0">
+                                <rect key="frame" x="113" y="423" width="47" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiF-Pi-jZq">
+                                <rect key="frame" x="151" y="383" width="47" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="54I-dT-WWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0Se-3m-6eT" firstAttribute="top" secondItem="xMn-jS-l75" secondAttribute="bottom" constant="20" id="1f5-Hh-Kjk"/>
+                            <constraint firstItem="0Se-3m-6eT" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="50" id="2sQ-gr-XTF"/>
+                            <constraint firstItem="DDV-3E-VP0" firstAttribute="top" secondItem="xMn-jS-l75" secondAttribute="bottom" constant="20" id="6o9-WL-AW8"/>
+                            <constraint firstItem="J0E-qj-AEq" firstAttribute="leading" secondItem="dfe-GO-d99" secondAttribute="trailing" constant="5" id="NEg-HQ-oqg"/>
+                            <constraint firstItem="wiF-Pi-jZq" firstAttribute="leading" secondItem="xMn-jS-l75" secondAttribute="trailing" constant="5" id="c6a-JV-aAl"/>
+                            <constraint firstItem="dfe-GO-d99" firstAttribute="top" secondItem="hO1-oY-c9n" secondAttribute="bottom" constant="55" id="dSy-9l-FFk"/>
+                            <constraint firstItem="J0E-qj-AEq" firstAttribute="top" secondItem="hO1-oY-c9n" secondAttribute="bottom" constant="55" id="etl-Wt-3Ti"/>
+                            <constraint firstItem="DDV-3E-VP0" firstAttribute="leading" secondItem="0Se-3m-6eT" secondAttribute="trailing" constant="5" id="fVa-2J-GEu"/>
+                            <constraint firstItem="hO1-oY-c9n" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="j24-HK-TbM"/>
                             <constraint firstItem="dlG-WC-ha4" firstAttribute="top" secondItem="54I-dT-WWS" secondAttribute="top" constant="25" id="jMd-AW-BCa"/>
+                            <constraint firstItem="xMn-jS-l75" firstAttribute="top" secondItem="dfe-GO-d99" secondAttribute="bottom" constant="20" id="mZy-Cg-0ay"/>
+                            <constraint firstItem="xMn-jS-l75" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="50" id="nqR-er-bxe"/>
+                            <constraint firstItem="wiF-Pi-jZq" firstAttribute="top" secondItem="J0E-qj-AEq" secondAttribute="bottom" constant="20" id="pdh-NS-Iri"/>
+                            <constraint firstItem="dfe-GO-d99" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="50" id="q1n-O2-4Gp"/>
                             <constraint firstItem="dlG-WC-ha4" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="vX5-Ap-TUD"/>
+                            <constraint firstItem="hO1-oY-c9n" firstAttribute="top" secondItem="dlG-WC-ha4" secondAttribute="bottom" constant="50" id="xBv-YA-tMX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zus-Pb-oFY"/>
                     <connections>
-                        <segue destination="bzx-Ii-rNU" kind="show" id="YQT-uR-6FS"/>
+                        <outlet property="emailLabel" destination="DDV-3E-VP0" id="F2U-S9-FkH"/>
+                        <outlet property="nameLabel" destination="J0E-qj-AEq" id="7Y6-ox-pLF"/>
+                        <outlet property="nicknameLabel" destination="wiF-Pi-jZq" id="Ycu-Kb-5UT"/>
+                        <outlet property="profileImageView" destination="hO1-oY-c9n" id="F5p-zj-yLX"/>
+                        <segue destination="bzx-Ii-rNU" kind="show" identifier="unwindToHomeSegue" id="am0-H0-e44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3c-Ut-jOx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2967" y="713"/>
+            <point key="canvasLocation" x="3876.811594202899" y="748.66071428571422"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="N77-lY-uS9">
@@ -149,13 +206,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SkinSight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-dO-Qsc">
-                                <rect key="frame" x="142" y="315" width="130" height="39"/>
+                                <rect key="frame" x="142.5" y="315" width="129.5" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="32"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover, protect, prevent: SkinSight, the power of AI skin detection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCB-ux-If2">
-                                <rect key="frame" x="100.5" y="384" width="213" height="66"/>
+                                <rect key="frame" x="100.5" y="383.5" width="213" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="MZF-D3-hac"/>
                                     <constraint firstAttribute="width" constant="213" id="NPO-9W-vgC"/>
@@ -184,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfG-fh-dIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023.1884057971015" y="-11.383928571428571"/>
+            <point key="canvasLocation" x="1933.3333333333335" y="-11.383928571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pyq-aZ-dOZ">
@@ -200,30 +257,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9u-IU-yS8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939.1304347826087" y="-11.383928571428571"/>
+            <point key="canvasLocation" x="2849.275362318841" y="-11.383928571428571"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Hd5-d6-g1E">
+        <scene sceneID="So4-dx-mm4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uO7-sf-6X8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIN-xb-C2t" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="kuL-So-Eqy"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xcz-yP-gLF">
+                    <navigationItem key="navigationItem" id="nsD-Ds-axe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AxN-52-Hzy">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bzx-Ii-rNU" kind="relationship" relationship="rootViewController" id="xGV-1A-LUP"/>
+                        <segue destination="bzx-Ii-rNU" kind="relationship" relationship="rootViewController" id="QRF-JP-yRC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CEX-3J-zLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Wm-x8-W6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113.04347826086958" y="-11.383928571428571"/>
+            <point key="canvasLocation" x="1023.1884057971015" y="-11.383928571428571"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YQT-uR-6FS"/>
+        <segue reference="am0-H0-e44"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Skinsight-logo-s" width="206.38999938964844" height="206.53999328613281"/>

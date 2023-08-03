@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var isAuthenticated = false
+//    var userProfile = Profile.empty
     
     // Create the buttons
     let signInButton = UIButton(type: .custom)
@@ -56,15 +57,6 @@ class HomeViewController: UIViewController {
     @objc func signInButtonTapped() {
     
         login()
-        
-//        print(self.isAuthenticated)
-        
-//        if self.isAuthenticated {
-//            DispatchQueue.main.async {
-//                self.performSegue(withIdentifier: "HomeToTabSegue", sender: self)
-//                print("oooouu yeahhh ouu wow chacarron owww")
-//            }
-//        }
     }
     
     
@@ -100,9 +92,9 @@ class HomeViewController: UIViewController {
                 self.isAuthenticated = false // Set to false in case of failure
             case .success(let credentials):
                 self.isAuthenticated = true // Set to true upon successful login
-                print(credentials)
+                Profile.setupSharedInstance(credentials.idToken)
 
-                // Perform the segue here, inside the success case
+                // Perform the segue
                 self.performSegue(withIdentifier: "HomeToTabSegue", sender: self)
             }
         }
