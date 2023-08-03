@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8507C8652A74560B001E8A03 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8507C8642A74560B001E8A03 /* CustomTabBar.swift */; };
+		850BE4392A7C3CA700D505BC /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850BE4382A7C3CA700D505BC /* RoundedImageView.swift */; };
 		851764592A70586C00E959E8 /* CircleButtonWithCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851764582A70586C00E959E8 /* CircleButtonWithCross.swift */; };
 		8517645D2A705E1700E959E8 /* UpdateModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8517645C2A705E1700E959E8 /* UpdateModalView.swift */; };
 		8533622B2A6600E9003127A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533622A2A6600E9003127A2 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		8507C8642A74560B001E8A03 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		850BE4382A7C3CA700D505BC /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		851764582A70586C00E959E8 /* CircleButtonWithCross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonWithCross.swift; sourceTree = "<group>"; };
 		8517645C2A705E1700E959E8 /* UpdateModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateModalView.swift; sourceTree = "<group>"; };
 		853362272A6600E9003127A2 /* Skinsight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skinsight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				851764582A70586C00E959E8 /* CircleButtonWithCross.swift */,
 				8507C8642A74560B001E8A03 /* CustomTabBar.swift */,
 				85DD14982A7A149600738423 /* Profile.swift */,
+				850BE4382A7C3CA700D505BC /* RoundedImageView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				85E1FD562A6C9FC000C2DFF1 /* ProfileViewController.swift in Sources */,
 				85F43DAF2A7330BD0052E81A /* TermsModalView.swift in Sources */,
 				859695CC2A6735DE00B31C6F /* HomeViewController.swift in Sources */,
+				850BE4392A7C3CA700D505BC /* RoundedImageView.swift in Sources */,
 				853362432A660D2B003127A2 /* ImageUploader.swift in Sources */,
 				8517645D2A705E1700E959E8 /* UpdateModalView.swift in Sources */,
 				851764592A70586C00E959E8 /* CircleButtonWithCross.swift in Sources */,
