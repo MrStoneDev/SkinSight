@@ -111,64 +111,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-WC-ha4">
-                                <rect key="frame" x="164.5" y="73" width="85" height="36"/>
+                                <rect key="frame" x="164.5" y="58" width="85" height="36"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-GO-d99" userLabel="Name:">
-                                <rect key="frame" x="173" y="359" width="68.5" height="26.5"/>
+                                <rect key="frame" x="40" y="359" width="68.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nickname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMn-jS-l75">
-                                <rect key="frame" x="156" y="459.5" width="102.5" height="26.5"/>
+                                <rect key="frame" x="40" y="459.5" width="102.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0E-qj-AEq">
-                                <rect key="frame" x="183.5" y="405.5" width="47" height="24"/>
+                                <rect key="frame" x="40" y="403" width="47" height="24"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiF-Pi-jZq">
-                                <rect key="frame" x="183.5" y="506" width="47" height="24"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDV-3E-VP0">
-                                <rect key="frame" x="183.5" y="606.5" width="47" height="24"/>
+                                <rect key="frame" x="40" y="494" width="47" height="24"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Se-3m-6eT">
-                                <rect key="frame" x="175.5" y="560" width="63.5" height="26.5"/>
+                                <rect key="frame" x="40" y="539" width="63.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
                                 <color key="textColor" red="0.078431372550000003" green="0.42352941179999998" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDV-3E-VP0">
+                                <rect key="frame" x="40" y="573" width="47" height="24"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="54I-dT-WWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dfe-GO-d99" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="4VT-YB-ybr"/>
-                            <constraint firstItem="0Se-3m-6eT" firstAttribute="top" secondItem="wiF-Pi-jZq" secondAttribute="bottom" constant="30" id="50c-Ms-a7Q"/>
-                            <constraint firstItem="xMn-jS-l75" firstAttribute="top" secondItem="J0E-qj-AEq" secondAttribute="bottom" constant="30" id="Eip-Wu-efA"/>
-                            <constraint firstItem="xMn-jS-l75" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="JXL-ut-MCl"/>
-                            <constraint firstItem="J0E-qj-AEq" firstAttribute="top" secondItem="dfe-GO-d99" secondAttribute="bottom" constant="20" id="OhQ-Yv-Ujy"/>
-                            <constraint firstItem="DDV-3E-VP0" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="RPg-37-9T2"/>
-                            <constraint firstItem="wiF-Pi-jZq" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="XQC-na-IQb"/>
-                            <constraint firstItem="0Se-3m-6eT" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="Y92-W7-MOv"/>
-                            <constraint firstItem="wiF-Pi-jZq" firstAttribute="top" secondItem="xMn-jS-l75" secondAttribute="bottom" constant="20" id="adL-wA-I8Z"/>
-                            <constraint firstItem="DDV-3E-VP0" firstAttribute="top" secondItem="0Se-3m-6eT" secondAttribute="bottom" constant="20" id="eVQ-zE-DkS"/>
-                            <constraint firstItem="J0E-qj-AEq" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="kNZ-1T-AKc"/>
-                            <constraint firstItem="dlG-WC-ha4" firstAttribute="top" secondItem="54I-dT-WWS" secondAttribute="top" constant="25" id="mWH-VO-MXD"/>
+                            <constraint firstItem="DDV-3E-VP0" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="40" id="H40-rx-xeg"/>
+                            <constraint firstItem="J0E-qj-AEq" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="40" id="KiW-uq-JBD"/>
+                            <constraint firstItem="xMn-jS-l75" firstAttribute="top" secondItem="J0E-qj-AEq" secondAttribute="bottom" constant="25" id="M4T-Vl-UV8"/>
+                            <constraint firstItem="xMn-jS-l75" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="40" id="UqR-N6-mrK"/>
+                            <constraint firstItem="0Se-3m-6eT" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="40" id="bB0-kU-D1J"/>
+                            <constraint firstItem="DDV-3E-VP0" firstAttribute="top" secondItem="0Se-3m-6eT" secondAttribute="bottom" constant="15" id="dmK-PC-PrM"/>
+                            <constraint firstItem="dlG-WC-ha4" firstAttribute="top" secondItem="54I-dT-WWS" secondAttribute="top" constant="10" id="mWH-VO-MXD"/>
+                            <constraint firstItem="wiF-Pi-jZq" firstAttribute="top" secondItem="xMn-jS-l75" secondAttribute="bottom" constant="15" id="pzp-AL-oPg"/>
+                            <constraint firstItem="J0E-qj-AEq" firstAttribute="top" secondItem="dfe-GO-d99" secondAttribute="bottom" constant="15" id="qLf-yy-VeU"/>
+                            <constraint firstItem="dfe-GO-d99" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="40" id="v41-2z-SPt"/>
                             <constraint firstItem="dlG-WC-ha4" firstAttribute="centerX" secondItem="NTF-m4-NYo" secondAttribute="centerX" id="vX5-Ap-TUD"/>
+                            <constraint firstItem="wiF-Pi-jZq" firstAttribute="leading" secondItem="54I-dT-WWS" secondAttribute="leading" constant="40" id="w6Y-BR-S2G"/>
+                            <constraint firstItem="0Se-3m-6eT" firstAttribute="top" secondItem="wiF-Pi-jZq" secondAttribute="bottom" constant="25" id="yJ1-TS-mYZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zus-Pb-oFY"/>

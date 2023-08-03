@@ -22,7 +22,13 @@ class ProfileViewController: UIViewController {
     let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
     let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
     
-    let profileImageView = RoundedImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+    let profileImageView = RoundedImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+    
+    // Create a UIView as a line separator
+    let lineView = UIView()
+    let lineView2 = UIView()
+    let lineView3 = UIView()
+    
     let logoutButton = UIButton(type: .custom)
     
     var isAuthenticated = true // Boolean variable to check authentication.
@@ -52,9 +58,23 @@ class ProfileViewController: UIViewController {
             
             // Set the elements with the account data.
             nameLabel.text = userProfile.name
+            nameLabel.translatesAutoresizingMaskIntoConstraints = false
+            
             nicknameLabel.text = userProfile.nickname
             emailLabel.text = userProfile.email
         }
+        
+        // Line separators
+        let lineWidth: CGFloat = 2.0
+
+        let lineView1 = createLineSeparator(yPosition: 400, lineWidth: lineWidth)
+        view.addSubview(lineView1)
+
+        let lineView2 = createLineSeparator(yPosition: 492, lineWidth: lineWidth)
+        view.addSubview(lineView2)
+
+        let lineView3 = createLineSeparator(yPosition: 582, lineWidth: lineWidth)
+        view.addSubview(lineView3)
         
         // Logout button
         logoutButton.setTitle("Log out", for: .normal)
@@ -76,18 +96,27 @@ class ProfileViewController: UIViewController {
             // Profile image
             profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
             profileImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20), // Distance from the label
-            profileImageView.widthAnchor.constraint(equalToConstant: 200),
-            profileImageView.heightAnchor.constraint(equalToConstant: 200),
+            profileImageView.widthAnchor.constraint(equalToConstant: 150),
+            profileImageView.heightAnchor.constraint(equalToConstant: 150),
             
             // Title Name label
             titleNameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 30),
             
             // Logout button
             logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor), // Center horizontally
-            logoutButton.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 30), // Distance from email
+            logoutButton.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 50), // Distance from email
             logoutButton.widthAnchor.constraint(equalToConstant: 150), // Width constraint
             logoutButton.heightAnchor.constraint(equalToConstant: 40), // Height constraint
         ])
+    }
+    
+    
+    //MARK: - Helpers
+    func createLineSeparator(yPosition: CGFloat, lineWidth: CGFloat) -> UIView {
+        let lineView = UIView()
+        lineView.backgroundColor = skinsightColor
+        lineView.frame = CGRect(x: 41, y: yPosition, width: view.frame.width - 100, height: lineWidth)
+        return lineView
     }
     
     
