@@ -8,7 +8,7 @@ class ImageUploader {
             completion(.failure(NSError(domain: "ImageError", code: 0, userInfo: nil)))
             return
         }
-        let apiUrl = "https://2952-34-125-161-82.ngrok.io" // Replace this with your actual API URL.
+        let apiUrl = "https://6d4e-35-247-118-94.ngrok.io" // Replace this with your actual API URL.
         
         let urlString = "\(apiUrl)/file" // Concatenate to construct the URL for the API endpoint to upload the image.
 
