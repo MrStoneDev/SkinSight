@@ -8,4 +8,4 @@ Skin conditions that the model can detect:
 
 ![1](skin_diagnosis.jpeg)
 
-App made with Swift, and UIKit
+App made with Swift.
