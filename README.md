@@ -4,4 +4,7 @@ SkinSght is a mobile application that uses an API to connect an AI model and sca
 
 The Login and Signup use Auth0 to perform authentication via email and password, or via Google account.
 
+Skin conditions that the model can detect:
 ![1](skin_diagnosis.jpeg)
+
+App made with Swift, and UIKit
