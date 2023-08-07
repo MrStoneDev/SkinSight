@@ -15,7 +15,7 @@ class UpdateModalView: UIView {
         label.text = "Upload the\nimage you want\nto be scanned"
         label.textAlignment = .center
         label.font = UIFont(name: "Lato-Regular", size: 18.0)
-        label.textColor = .black
+        label.textColor = UIColor(named: "modaltextColor")
         label.numberOfLines = 0 // Allow multiple lines
         return label
     }()
@@ -23,18 +23,21 @@ class UpdateModalView: UIView {
     let closeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Close", for: .normal)
+        button.tintColor = UIColor(named: "uploadbuttonsColor")
         return button
     }()
     
     let takePhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Take a photo", for: .normal)
+        button.tintColor = UIColor(named: "uploadbuttonsColor")
         return button
     }()
     
     let selectImageButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Select an image", for: .normal)
+        button.tintColor = UIColor(named: "uploadbuttonsColor")
         return button
     }()
     
@@ -50,7 +53,7 @@ class UpdateModalView: UIView {
     
     // Setup UI elements
     private func setupViews() {
-        backgroundColor = .white
+        backgroundColor = UIColor(named: "modalColor")
         layer.cornerRadius = 10.0 // Rounded corners
         
         // Add UI elements to the modal view

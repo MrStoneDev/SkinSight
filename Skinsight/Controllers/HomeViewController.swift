@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     let signUpButton = UIButton(type: .custom)
     
     // Set the required colors to have a more readable code
-    let skinsightColor = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0) // #146C94 color
+    let skinsightColor = UIColor(named: "skinsightColor")
     let animationButtonColor = UIColor(red: 79/255.0, green: 163/255.0, blue: 255/255.0, alpha: 1.0)  // #4fa3ff color
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         signInButton.setTitle("Sign in", for: .normal)
         signInButton.titleLabel?.font = UIFont(name: "Lato-Regular", size: 18.0)
         
-        signInButton.backgroundColor = skinsightColor
+        signInButton.backgroundColor = UIColor(named: "buttonsColor")
         signInButton.layer.cornerRadius = 20
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false // Important to use Auto Layout
@@ -69,14 +69,6 @@ class HomeViewController: UIViewController {
         // Revert the color change after 0.25 second
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             self.signInButton.setTitleColor(.white, for: .normal)
-        }
-    }
-
-    @objc func signUpButtonTouchDown() {
-        signUpButton.setTitleColor(self.animationButtonColor, for: .normal)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-            self.signUpButton.setTitleColor(self.skinsightColor, for: .normal)
         }
     }
     

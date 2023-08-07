@@ -21,7 +21,7 @@ class TermsModalView: UIView {
         label.text = "Terms & Conditions"
         label.textAlignment = .center
         label.font = UIFont(name: "Lato-Regular", size: 18.0)
-        label.textColor = .black
+        label.textColor = UIColor(named: "modaltextColor")
         label.numberOfLines = 0 // Allow multiple lines
         return label
     }()
@@ -29,6 +29,7 @@ class TermsModalView: UIView {
     let acceptButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Accept", for: .normal)
+        button.tintColor = UIColor(named: "uploadbuttonsColor")
         return button
     }()
     
@@ -36,7 +37,7 @@ class TermsModalView: UIView {
     let largeTextLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Lato-Regular", size: 16.0)
-        label.textColor = .black
+        label.textColor = UIColor(named: "modaltextColor")
         label.numberOfLines = 0
         label.textAlignment = .justified
         return label
@@ -54,7 +55,7 @@ class TermsModalView: UIView {
     
     // Setup UI elements
     private func setupViews() {
-        backgroundColor = .white
+        backgroundColor = UIColor(named: "modalColor")
         layer.cornerRadius = 10.0 // Rounded corners
         
         // Add the UIScrollView to the modal view

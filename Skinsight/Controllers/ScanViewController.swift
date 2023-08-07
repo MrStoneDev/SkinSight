@@ -37,7 +37,7 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     // Create a loader.
     lazy var loaderView: UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView(style: .large)
-        loader.color = UIColor(red: 20/255.0, green: 108/255.0, blue: 148/255.0, alpha: 1.0)
+        loader.color = UIColor(named: "skinsightColor")
         loader.hidesWhenStopped = true
         loader.translatesAutoresizingMaskIntoConstraints = false
         return loader
@@ -77,8 +77,9 @@ class ScanViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         view.insertSubview(overlayView, belowSubview: updateModalView)
         
         uploadButton.setTitle("Upload Image", for: .normal)
-        uploadButton.translatesAutoresizingMaskIntoConstraints = false
+        uploadButton.tintColor = UIColor(named: "buttonsColor")
         
+        uploadButton.translatesAutoresizingMaskIntoConstraints = false
         uploadButton.addTarget(self, action: #selector(uploadImage), for: .touchUpInside)
         
         view.addSubview(uploadButton)
