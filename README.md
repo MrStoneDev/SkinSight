@@ -6,6 +6,12 @@ The Login and Signup use Auth0 to perform authentication via email and password,
 
 Skin conditions that the model can detect:
 
-![1](skin_diagnosis.jpeg)
+![1](./assets/skin_diagnosis.jpeg)
 
 App made with Swift.
+
+## App Demo
+
+<div style="text-align: center;">
+  <img src="./assets/skinSightDemo.gif" width="300px"/>
+</div>
